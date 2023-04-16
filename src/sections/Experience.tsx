@@ -20,21 +20,21 @@ const Experience = () => {
 
       <div className="flex items-center relative  w-full h-[600px] m-auto mb-16">
         <div className="w-1 h-[500px] bg-blue_color absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-          <div className="border-blue_color border-[2px] w-16 h-16 bg-transparent rounded-full flex items-center justify-center absolute top-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-            <div className="border-blue_color border-[2px] w-12 h-12 bg-transparent rounded-full flex items-center justify-center">
-              <div className="relative bg-blue_color w-8 h-8  rounded-full"></div>
+          <div className="border-blue_color border-[2px] w-12 h-12 bg-transparent rounded-full flex items-center justify-center absolute top-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+            <div className="border-blue_color border-[2px] w-8 h-8 bg-transparent rounded-full flex items-center justify-center">
+              <div className="relative bg-blue_color w-4 h-4  rounded-full"></div>
             </div>
           </div>
 
-          <div className="border-blue_color border-[2px] w-16 h-16 bg-transparent rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-            <div className="border-blue_color border-[2px] w-12 h-12 bg-transparent rounded-full flex items-center justify-center">
-              <div className="relative bg-blue_color w-8 h-8  rounded-full"></div>
+          <div className="border-blue_color border-[2px] w-12 h-12 bg-transparent rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+            <div className="border-blue_color border-[2px] w-8 h-8 bg-transparent rounded-full flex items-center justify-center">
+              <div className="relative bg-blue_color w-4 h-4  rounded-full"></div>
             </div>
           </div>
 
-          <div className="border-blue_color border-[2px] w-16 h-16 bg-transparent rounded-full flex items-center justify-center absolute -bottom-6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-            <div className="border-blue_color border-[2px] w-12 h-12 bg-transparent rounded-full flex items-center justify-center">
-              <div className=" relative bg-blue_color w-8 h-8  rounded-full"></div>
+          <div className="border-blue_color border-[2px] w-12 h-12 bg-transparent rounded-full flex items-center justify-center absolute -bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+            <div className="border-blue_color border-[2px] w-8 h-8 bg-transparent rounded-full flex items-center justify-center">
+              <div className=" relative bg-blue_color w-4 h-4  rounded-full"></div>
             </div>
           </div>
         </div>

@@ -24,7 +24,7 @@ const ProjectCard: React.FC<projectCardProps> = ({
     <div className="bg-black_color text-white flex flex-col lg:flex-row w-full border-[2px] border-[black] rounded-b-xl lg:rounded-r-xl lg:rounded-l-none shadow-lg transition-all hover:shadow-2xl">
       <div
         style={{ backgroundImage: `url(${imageUrl})` }}
-        className={` bg-cover bg-top bg-no-repeat h-[400px] w-full lg:w-6/12  transition-all ease-linear duration-[5s] hover:bg-bottom cursor-pointer`}
+        className={`bg-cover bg-top bg-no-repeat h-[400px] lg:w-6/12  transition-all ease-linear duration-[5s] hover:bg-bottom cursor-pointer`}
       >
         {underConstruction && (
           <div className="bg-white bg-opacity-90 flex justify-between items-center px-4">
@@ -46,7 +46,7 @@ const ProjectCard: React.FC<projectCardProps> = ({
         <h4 className="text-2xl">{projectName}</h4>
         <p className="mb-8 lg:mb-4">{projectDescription}</p>
         <div className=" mt-auto">
-          <div className="flex space-x-2 text-xs text-black mb-4">
+          <div className="flex flex-wrap gap-2 text-xs text-black mb-4">
             {tech.map((item, index) => {
               return (
                 <p className="px-2 py-1 rounded-full bg-blue_color" key={index}>

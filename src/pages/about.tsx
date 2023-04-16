@@ -34,7 +34,7 @@ const About = () => {
                 alt=""
                 width={350}
                 height={400}
-                className='float-right ml-4'
+                className='mb-2 md:mb-0 md:float-right md:ml-4'
               />
               <div className="space-y-3 ">
                 <p>
@@ -265,7 +265,7 @@ const About = () => {
                   alt=""
                   width={400}
                   height={400}
-                  className="rounded-xl float-right ml-4"
+                  className="rounded-xl mb-2 md:mb-2 md:float-right md:ml-4"
                 />
                 <p>
                   Having immigrated to the United States as a child in the early

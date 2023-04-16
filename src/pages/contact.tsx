@@ -71,8 +71,8 @@ const Contact = () => {
               free to drop me a message anytime. I&apos;d love to hear from you!
             </p>
           </div>
-          <div className=" m-auto flex flex-col justify-center items-center">
-            <div className="text-center space-y-2 mb-4">
+          <div className=" m-auto flex flex-col justify-center items-center w-full">
+            <div className="text-center space-y-2 m-auto mb-4">
               <Link
                 className="font-medium text-lg text-blue_color"
                 href="mailto:luisdev@luisgonzalezdev.org"

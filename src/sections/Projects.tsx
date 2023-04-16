@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
   console.log(reducedProjects)
 
   return (
-    <div className="py-16 flex flex-col items-center w-[1400px] max-w-full px-4 m-auto">
+    <div className="py-16 flex flex-col items-center justify-center w-[1400px] max-w-full px-4 m-auto">
       <div className="m-auto mb-12 ">
         <div className="relative w-fit py-2 m-auto mb-4">
           <h3 className="">Projects</h3>
