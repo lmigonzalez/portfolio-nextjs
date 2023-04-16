@@ -53,7 +53,7 @@ export const testimonials = [
     message: 'Works Fast and very attentive.',
     source: 'Fiverr',
     stars: 5,
-    name: 'John Snow',
+    name: 'melc24',
     gender: 'man'
   },
   {
@@ -61,15 +61,15 @@ export const testimonials = [
     message: 'Very easy to work with. Made sure that I got all of my considerations completed.',
     source: 'Fiverr',
     stars: 5,
-    name: 'Alicia Alonzo',
-    gender: 'women'
+    name: 'hardy2g',
+    gender: 'man'
   },
   {
     id: 4,
     message: 'Excellent work, good communication!',
-    source: 'Local',
+    source: 'Fiverr',
     stars: 5,
-    name: 'John Snow',
+    name: 'erljp7',
     gender: 'man'
   },
   {
@@ -77,23 +77,15 @@ export const testimonials = [
     message: 'Excellent experience, saved our team a lot of time and stress',
     source: 'Upwork',
     stars: 5,
-    name: 'Alicia Alonzo',
+    name: 'client',
     gender: 'women'
   },
-  // {
-  //   id: 6,
-  //   message: "Luis is one of the best professional programmers. His React and node coding skills are amazing and he always solves any critical and difficult problems in a short time. I really appreciate your help and strong skills. Thank you for taking the time to work on our project.",
-  //   source: 'Upwork',
-  //   stars: 5,
-  //   name: 'Alicia Alonzo',
-  //   gender: 'women'
-  // },
   {
     id: 7,
     message: 'Luis did a great job as always. Very professional and easy to work. Will hire him again for our future projects. Thank you!',
     source: 'Upwork',
     stars: 5,
-    name: 'Alicia Alonzo',
+    name: 'client',
     gender: 'women'
   },
   {
@@ -104,14 +96,6 @@ export const testimonials = [
     name: 'Alicia Alonzo',
     gender: 'women'
   },
-  // {
-  //   id: 1,
-  //   message: 'Excellent provider. We ran into a few minor issues, but he was focused on resolving every one of them till the project was complete. I highly recommend him!',
-  //   source: 'Fiverr',
-  //   stars: 5,
-  //   name: 'John Snow',
-  //   gender: 'man'
-  // },
 
 ];
 
