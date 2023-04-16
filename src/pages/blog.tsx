@@ -47,7 +47,7 @@ const Blog = () => {
               </div>
             ) : (
               <div className="flex flex-wrap justify-center gap-4 my-16 m-auto">
-                {blogs.map((item, index) => {
+                {/* {blogs.map((item, index) => {
                   return (
                     <BlogCard
                       key={index}
@@ -56,7 +56,7 @@ const Blog = () => {
                       tags={item.tags}
                     />
                   );
-                })}
+                })} */}
               </div>
             )}
           </div>
