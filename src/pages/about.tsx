@@ -38,7 +38,7 @@ const About = () => {
               />
               <div className="space-y-3 ">
                 <p>
-                  My name is Luis Gonzalez, and I'm a skilled Full-Stack Web
+                  My name is Luis Gonzalez, and I&apos;m a skilled Full-Stack Web
                   Developer based in sunny Miami, Florida.{' '}
                 </p>
                 <p>
@@ -53,12 +53,12 @@ const About = () => {
                   Next, Angular, Node, and Express.{' '}
                 </p>
                 <p>
-                  I'm also proficient in databases such as MongoDB and AWS,
+                  I&apos;m also proficient in databases such as MongoDB and AWS,
                   allowing me to create fast and efficient web applications that
                   are responsive to user needs.
                 </p>
                 <p>
-                  In addition to my development skills, I'm also a talented
+                  In addition to my development skills, I&apos;m also a talented
                   UX/UI designer. Using tools like Figma, I create beautiful,
                   intuitive designs that optimize the user experience and keep
                   people coming back to your site.
@@ -68,7 +68,7 @@ const About = () => {
                   solid foundation in SEO techniques. By optimizing websites for
                   search engines, I can boost your online visibility and attract
                   more visitors to your site. From keyword research to content
-                  optimization, I'm well-versed in the latest SEO best practices
+                  optimization, I&apos;m well-versed in the latest SEO best practices
                   and can help you achieve your online goals.
                 </p>
               </div>
@@ -81,13 +81,13 @@ const About = () => {
             <p>
               I also possess strong client management skills. I have experience
               working with clients to understand their unique needs and develop
-              solutions that exceed their expectations. I've been working as a
+              solutions that exceed their expectations. I&apos;ve been working as a
               freelance web developer for a few months now, which has allowed me
               to hone my client management skills while delivering top-notch
               work.{' '}
             </p>
             <p>
-              Whether you're a small business owner or a large corporation, I'm
+              Whether you&apos;re a small business owner or a large corporation, I&apos;m
               committed to providing you with the highest level of customer
               service throughout the entire development process.
             </p>
@@ -160,7 +160,7 @@ const About = () => {
               <li>
                 {' '}
                 <b>Custom web development:</b> I can build custom web
-                applications tailored to your unique needs, whether it's a
+                applications tailored to your unique needs, whether it&apos;s a
                 simple marketing website, a complex e-commerce platform, or a
                 sophisticated web-based tool.
               </li>
@@ -186,7 +186,7 @@ const About = () => {
                 {' '}
                 <b>E-commerce development:</b> I can develop e-commerce
                 platforms that are tailored to your unique business needs,
-                whether it's a simple online store or a complex marketplace.
+                whether it&apos;s a simple online store or a complex marketplace.
               </li>
               <li>
                 {' '}
@@ -220,7 +220,7 @@ const About = () => {
                 {' '}
                 <b>Client management skills:</b> I have experience working with
                 clients to understand their needs and develop solutions that
-                exceed their expectations. I'm committed to providing the
+                exceed their expectations. I&apos;m committed to providing the
                 highest level of customer service throughout the entire
                 development process.
               </li>
@@ -239,7 +239,7 @@ const About = () => {
               <li>
                 {' '}
                 <b>Custom solutions:</b> I can create custom solutions tailored
-                to your unique needs, whether it's a simple marketing website or
+                to your unique needs, whether it&apos;s a simple marketing website or
                 a complex e-commerce platform.
               </li>
               <li>

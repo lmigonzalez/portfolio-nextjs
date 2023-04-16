@@ -8,7 +8,7 @@ const Hero = () => {
     <div className="flex flex-col items-center justify-center space-y-3 py-32 px-4 text-center w-[1400px] max-w-full m-auto">
       <h1 className="text-orange_color">Luis Gonzalez</h1>
       <h2 className="text-4xl">Full-Stack Web Developer</h2>
-      <p>"Creating seamless user experiences through the power of code"</p>
+      <p>&ldquo;Creating seamless user experiences through the power of code&ldquo;</p>
 
       <Image
         src="/new-logo.svg"

@@ -68,7 +68,7 @@ const Contact = () => {
             </div>
             <p className="text-lg text-center">
               If you have any questions or just want to say hello, please feel
-              free to drop me a message anytime. I'd love to hear from you!
+              free to drop me a message anytime. I&apos;d love to hear from you!
             </p>
           </div>
           <div className=" m-auto flex flex-col justify-center items-center">

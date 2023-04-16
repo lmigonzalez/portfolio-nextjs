@@ -46,7 +46,7 @@ const Services = () => {
             </h4>
             <p className="m-auto max-w-[700px]">
               I am consistently thrilled about acquiring new knowledge. Hence,
-              if there's something you require that isn't listed, please don't
+              if there&apos;s something you require that isn&apos;t listed, please don&apos;t
               hesitate to{' '}
               <Link className="text-blue_color font-semibold" href="/contact">
                 contact me.
@@ -124,7 +124,7 @@ const Services = () => {
                 >
                   {hoverBox === 3 && isHover && (
                     <p className="text-black">
-                      Bring your app idea to life with our top-notch app development services. From concept to launch, I'll work with you every step of the way to build a high-quality and user-friendly app that meets your specific needs and requirements. Let's create something amazing together.
+                      Bring your app idea to life with our top-notch app development services. From concept to launch, I&apos;ll work with you every step of the way to build a high-quality and user-friendly app that meets your specific needs and requirements. Let&apos;s create something amazing together.
                     </p>
                   )}
                 </div>
@@ -153,7 +153,7 @@ const Services = () => {
                 >
                   {hoverBox === 4 && isHover && (
                     <p className="text-black">
-                      Looking to start an online store? My e-commerce website development services can help you create a powerful and easy-to-use online store that drives sales and growth. From shopping cart integration to payment gateway setup, we've got everything you need to get your business up and running online. Let's build your e-commerce website today.
+                      Looking to start an online store? My e-commerce website development services can help you create a powerful and easy-to-use online store that drives sales and growth. From shopping cart integration to payment gateway setup, we&apos;ve got everything you need to get your business up and running online. Let&apos;s build your e-commerce website today.
 
                     </p>
                   )}
@@ -178,7 +178,7 @@ const Services = () => {
                 >
                   {hoverBox === 5 && isHover && (
                     <p className="text-black">
-                     Boost your online visibility and drive more traffic to your website with our SEO services. I'll help you optimize your website for search engines, improve your website's ranking, and drive more organic traffic to your website.
+                     Boost your online visibility and drive more traffic to your website with our SEO services. I&apos;ll help you optimize your website for search engines, improve your website&apos;s ranking, and drive more organic traffic to your website.
                     </p>
                   )}
                 </div>
@@ -207,7 +207,7 @@ const Services = () => {
                 >
                   {hoverBox === 6 && isHover && (
                     <p className={`text-black`}>
-                      Looking to build or optimize your website on WordPress? My WordPress development and optimization services can help you create a high-performing website that is visually stunning and user-friendly. I'll help you with everything from theme customization to plugin installation, security optimization, and speed optimization. Let's make your WordPress website stand out from the crowd.
+                      Looking to build or optimize your website on WordPress? My WordPress development and optimization services can help you create a high-performing website that is visually stunning and user-friendly. I&apos;ll help you with everything from theme customization to plugin installation, security optimization, and speed optimization. Let&apos;s make your WordPress website stand out from the crowd.
                     </p>
                   )}
                 </div>

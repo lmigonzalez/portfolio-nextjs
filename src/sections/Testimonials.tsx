@@ -13,7 +13,7 @@ const Testimonials = () => {
           ></span>
         </div>
         <p className="text-lg text-center">
-        Don't just take my word for it - see what my satisfied clients have to say about my work.
+        Don&apos;t just take my word for it - see what my satisfied clients have to say about my work.
         </p>
       </div>
 
