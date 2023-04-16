@@ -38,7 +38,7 @@ const Experience = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2 flex flex-col justify-between h-[500px] pl-4">
+        <div className="w-1/2 flex flex-col justify-between h-[500px] ">
           <div className="w-full h-20">
             <div className="border-b-2 h-1/2 border-blue_color flex items-end">
               <p className="text-xl font-bold">Freelance Developer</p>
@@ -54,7 +54,7 @@ const Experience = () => {
             <p className="text-xs">Nov 2021 - Present</p>
           </div>
         </div>
-        <div className="w-1/2 flex items-center justify-between h-[500px] pr-4">
+        <div className="w-1/2 flex items-center justify-between h-[500px]">
           <div className="w-full h-20 text-end">
             <div className="border-b-2 h-1/2 border-blue_color flex items-end justify-end">
               <p className="text-xl font-bold">Orlando O Spencer I, Inc.</p>
