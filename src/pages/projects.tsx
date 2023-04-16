@@ -4,7 +4,6 @@ import ReactPaginate from 'react-paginate';
 import Layout from '@/components/layout/Layout';
 import { useStateContext } from '@/context/StateContext';
 import { projects } from '../data/Projects';
-
 import ProjectCard from '@/components/ProjectCard';
 const Projects = () => {
   const { theme } = useStateContext();

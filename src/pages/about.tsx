@@ -3,10 +3,10 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '@/components/layout/Layout';
 
-import {useStateContext} from '../context/StateContext'
+import { useStateContext } from '../context/StateContext';
 const About = () => {
+  const { theme } = useStateContext();
 
-  const {theme} = useStateContext()
 
   return (
     <>
@@ -34,12 +34,12 @@ const About = () => {
                 alt=""
                 width={350}
                 height={400}
-                className='mb-2 md:mb-0 md:float-right md:ml-4'
+                className="mb-2 md:mb-0 md:float-right md:ml-4"
               />
               <div className="space-y-3 ">
                 <p>
-                  My name is Luis Gonzalez, and I&apos;m a skilled Full-Stack Web
-                  Developer based in sunny Miami, Florida.{' '}
+                  My name is Luis Gonzalez, and I&apos;m a skilled Full-Stack
+                  Web Developer based in sunny Miami, Florida.{' '}
                 </p>
                 <p>
                   With a passion for coding and a keen eye for design, I
@@ -68,8 +68,8 @@ const About = () => {
                   solid foundation in SEO techniques. By optimizing websites for
                   search engines, I can boost your online visibility and attract
                   more visitors to your site. From keyword research to content
-                  optimization, I&apos;m well-versed in the latest SEO best practices
-                  and can help you achieve your online goals.
+                  optimization, I&apos;m well-versed in the latest SEO best
+                  practices and can help you achieve your online goals.
                 </p>
               </div>
             </div>
@@ -81,15 +81,15 @@ const About = () => {
             <p>
               I also possess strong client management skills. I have experience
               working with clients to understand their unique needs and develop
-              solutions that exceed their expectations. I&apos;ve been working as a
-              freelance web developer for a few months now, which has allowed me
-              to hone my client management skills while delivering top-notch
-              work.{' '}
+              solutions that exceed their expectations. I&apos;ve been working
+              as a freelance web developer for a few months now, which has
+              allowed me to hone my client management skills while delivering
+              top-notch work.{' '}
             </p>
             <p>
-              Whether you&apos;re a small business owner or a large corporation, I&apos;m
-              committed to providing you with the highest level of customer
-              service throughout the entire development process.
+              Whether you&apos;re a small business owner or a large corporation,
+              I&apos;m committed to providing you with the highest level of
+              customer service throughout the entire development process.
             </p>
           </div>
           <div className="space-y-4 py-8  w-full">
@@ -155,7 +155,13 @@ const About = () => {
           </div>
 
           <div className="w-full py-8 ">
-            <h3 className={`text-xl mb-4 ${theme === 'light' ? 'text-black': 'text-white'}`}>My Expertise:</h3>
+            <h3
+              className={`text-xl mb-4 ${
+                theme === 'light' ? 'text-black' : 'text-white'
+              }`}
+            >
+              My Expertise:
+            </h3>
             <ul className="space-y-3">
               <li>
                 {' '}
@@ -186,7 +192,8 @@ const About = () => {
                 {' '}
                 <b>E-commerce development:</b> I can develop e-commerce
                 platforms that are tailored to your unique business needs,
-                whether it&apos;s a simple online store or a complex marketplace.
+                whether it&apos;s a simple online store or a complex
+                marketplace.
               </li>
               <li>
                 {' '}
@@ -198,7 +205,11 @@ const About = () => {
           </div>
 
           <div className="w-full py-8 ">
-            <h3 className={`text-xl mb-4 ${theme === 'light' ? 'text-black': 'text-white'}`}>
+            <h3
+              className={`text-xl mb-4 ${
+                theme === 'light' ? 'text-black' : 'text-white'
+              }`}
+            >
               What I bring to the table:
             </h3>
             <ul className="space-y-3">
@@ -239,8 +250,8 @@ const About = () => {
               <li>
                 {' '}
                 <b>Custom solutions:</b> I can create custom solutions tailored
-                to your unique needs, whether it&apos;s a simple marketing website or
-                a complex e-commerce platform.
+                to your unique needs, whether it&apos;s a simple marketing
+                website or a complex e-commerce platform.
               </li>
               <li>
                 {' '}
@@ -253,14 +264,18 @@ const About = () => {
 
           {/* personal inf */}
           <div className="w-full py-8 ">
-            <h3 className= {`text-xl mb-4 ${theme === 'light' ? 'text-black': 'text-white'}`} >
+            <h3
+              className={`text-xl mb-4 ${
+                theme === 'light' ? 'text-black' : 'text-white'
+              }`}
+            >
               But Luis, tell me more about you. Okay okay, if you really want to
               know, here is some information about my personal life.
             </h3>
-            <div className='flex gap-4'>
+            <div className="flex gap-4">
               {' '}
-              <div className='space-y-3'>
-              <Image
+              <div className="space-y-3">
+                <Image
                   src={'/Luis-Gonzalez-family.png'}
                   alt=""
                   width={400}

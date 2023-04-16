@@ -14,7 +14,6 @@ interface ImagesObj {
 const Projects: React.FC = () => {
   const reducedProjects = projects.slice(0, 3);
 
-  console.log(reducedProjects)
 
   return (
     <div className="py-16 flex flex-col items-center justify-center w-[1400px] max-w-full px-4 m-auto">

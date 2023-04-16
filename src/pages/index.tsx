@@ -5,8 +5,6 @@ import { useStateContext } from '@/context/StateContext';
 const roboto = Roboto({weight: ['100','300','400','500','700','900'], subsets: ['latin'] });
 
 import Layout from '@/components/layout/Layout';
-
-
 import  Hero  from '@/sections/Hero';
 import Skills  from '@/sections/Skills';
 import Projects from '@/sections/Projects';
