@@ -49,7 +49,7 @@ export const skills = [
 export const testimonials = [
 
   {
-    id: 2,
+    id: 1,
     message: 'Works Fast and very attentive.',
     source: 'Fiverr',
     stars: 5,
@@ -57,7 +57,7 @@ export const testimonials = [
     gender: 'man'
   },
   {
-    id: 3,
+    id: 2,
     message: 'Very easy to work with. Made sure that I got all of my considerations completed.',
     source: 'Fiverr',
     stars: 5,
@@ -65,7 +65,7 @@ export const testimonials = [
     gender: 'man'
   },
   {
-    id: 4,
+    id: 3,
     message: 'Excellent work, good communication!',
     source: 'Fiverr',
     stars: 5,
@@ -73,7 +73,7 @@ export const testimonials = [
     gender: 'man'
   },
   {
-    id: 5,
+    id: 4,
     message: 'Excellent experience, saved our team a lot of time and stress',
     source: 'Upwork',
     stars: 5,
@@ -81,19 +81,19 @@ export const testimonials = [
     gender: 'women'
   },
   {
-    id: 7,
+    id: 5,
     message: 'Luis did a great job as always. Very professional and easy to work. Will hire him again for our future projects. Thank you!',
     source: 'Upwork',
     stars: 5,
     name: 'client',
-    gender: 'women'
+    gender: 'man'
   },
   {
-    id: 8,
+    id: 6,
     message: 'Luis is an excellent React developer. Very professional with great communication. I highly recommend him and will hire him again for future work',
     source: 'Upwork',
     stars: 5,
-    name: 'Alicia Alonzo',
+    name: 'client',
     gender: 'women'
   },
 
