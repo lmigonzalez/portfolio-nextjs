@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
   const { theme } = useStateContext();
   return (
     <div
-      className={`${roboto.className} flex flex-col h-full ${
+      className={`${roboto.className} flex flex-col min-h-screen ${
         theme === 'light' ? 'bg-white' : 'bg-[#282A3A] text-white'
       }`}
     >
