@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { useStateContext } from '../context/StateContext';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -9,7 +9,7 @@ import axios from 'axios';
 import Spinner from '@/components/Spinner';
 const Contact = () => {
   const { theme } = useStateContext();
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
   // const [status, setStatus] = useState('')
   const {
     values,
@@ -29,28 +29,48 @@ const Contact = () => {
     onSubmit,
   });
 
-  function onSubmit(values:object, action:any) {
-    setLoading(true)
+  function onSubmit(values: object, action: any) {
+    setLoading(true);
     axios
-    .post('/api/mail', values)
-    .then((res) => {
-      setLoading(false)
-    })
-    .catch((err) => {
+      .post('/api/mail', values)
+      .then((res) => {
+        setLoading(false);
+      })
+      .catch((err) => {});
 
-    })
-    
     action.resetForm();
   }
-
 
   return (
     <>
       <Head>
         <title>Luis Gonzalez | Contact</title>
-        <meta name="description" content="Get in touch with me and let's discuss how I can help you achieve your business objectives. I'm always happy to hear from you!" />
+        <meta
+          name="description"
+          content="Get in touch with me and let's discuss how I can help you achieve your business objectives. I'm always happy to hear from you!"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
       </Head>
       <Layout>
         <div
@@ -87,7 +107,9 @@ const Contact = () => {
               onSubmit={handleSubmit}
               className="flex flex-col w-[700px] max-w-full border-2 border-orange_color px-4 py-6 rounded-xl"
             >
-              <label className="after:content-['*'] after:text-[#EB4747]">Full Name:</label>
+              <label className="after:content-['*'] after:text-[#EB4747]">
+                Full Name:
+              </label>
               <input
                 type="text"
                 name="fullName"
@@ -101,7 +123,9 @@ const Contact = () => {
                   {errors.fullName}
                 </p>
               ) : null}
-              <label className="after:content-['*'] after:text-[#EB4747]">Email:</label>
+              <label className="after:content-['*'] after:text-[#EB4747]">
+                Email:
+              </label>
               <input
                 type="text"
                 name="email"
@@ -111,7 +135,9 @@ const Contact = () => {
                 className="rounded h-10 px-4 text-black mb-4 border-[2px]"
               />
               {touched.email && errors.email ? (
-                <p className="text-red-500 font-extralight mb-4">{errors.email}</p>
+                <p className="text-red-500 font-extralight mb-4">
+                  {errors.email}
+                </p>
               ) : null}
               <label>Any Note?:</label>
               <textarea
@@ -128,10 +154,9 @@ const Contact = () => {
               ) : null}
               <div className="w-full flex justify-end">
                 <button className="bg-orange_color w-full md:w-1/2 h-10 rounded text-white flex justify-center items-center">
-                  {loading ? <Spinner/> : 'Send'}
+                  {loading ? <Spinner /> : 'Send'}
                 </button>
               </div>
-              
             </form>
           </div>
         </div>
