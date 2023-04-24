@@ -7,16 +7,17 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Script
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.MEASUREMENT_ID}`}
       />
 
-      <Script id="google-analytics" strategy="afterInteractive">
+      <Script id="google-analytics" strategy="lazyOnload">
         {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${process.env.MEASUREMENT_ID}');
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+       
+         gtag('config', '${process.env.MEASUREMENT_ID}');
     `}
       </Script>
 
