@@ -42,7 +42,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           <h2 className="text-xl font-semibold">{blogTitle}</h2>
           <div className='absolute bottom-2'>
             <div className="flex space-x-2 text-xs text-black ">
-              {tags?.map((item, index) => {
+              {tags?.map((item:any, index:number) => {
                 return (
                   <p
                     key={index}
