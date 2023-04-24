@@ -1,11 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { Roboto } from 'next/font/google';
 import { useStateContext } from '@/context/StateContext';
-const roboto = Roboto({
-  weight: ['100', '300', '400', '500', '700', '900'],
-  subsets: ['latin'],
-});
 
 import Layout from '@/components/layout/Layout';
 import Hero from '@/sections/Hero';
@@ -50,7 +45,7 @@ export default function Home() {
       </Head>
       <Layout>
         <div
-          className={`${roboto.className} relative transition-all ${
+          className={`relative transition-all ${
             theme === 'light' ? 'bg-white' : 'bg-[#282A3A] text-white'
           }`}
         >
