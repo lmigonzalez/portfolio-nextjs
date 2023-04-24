@@ -18,6 +18,28 @@
   h3 {
     @apply font-bold text-4xl text-orange_color;
   }
+
+
+  article{
+    @apply py-8
+  }
+
+  article h1{
+    @apply text-black text-2xl text-current my-4
+  }
+
+ article h2, article h3{
+    @apply text-black text-xl text-current my-4 font-semibold
+  }
+
+
+  article p{
+    @apply my-4 text-lg leading-8 font-light
+  }
+
+  article pre{
+    @apply  text-blue_color bg-black p-4 rounded-md overflow-x-auto whitespace-pre-wrap
+  }
 }
 
 @layer components {
@@ -50,5 +72,7 @@
   .hide-scroll-bar::-webkit-scrollbar {
     display: none;
   }
+
+
 
 }

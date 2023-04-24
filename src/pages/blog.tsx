@@ -3,7 +3,23 @@ import Head from 'next/head';
 import Layout from '@/components/layout/Layout';
 import BlogCard from '@/components/BlogCard';
 import { blogs } from '../data/Blogs';
-const Blog = () => {
+
+import { createClient } from 'contentful';
+interface BlogPost {
+  fields: {
+    tags: string [];
+    title: string;
+    thumbnail: string;
+  }
+}
+
+interface Props {
+  blogPost: BlogPost[];
+}
+
+const Blog: React.FC<Props> = ({ blogPost }) => {
+
+  
   return (
     <>
       <Head>
@@ -70,16 +86,18 @@ const Blog = () => {
               </div>
             ) : (
               <div className="flex flex-wrap justify-center gap-4 my-16 m-auto">
-                {/* {blogs.map((item, index) => {
+                {blogPost.map((item, index) => {
                   return (
                     <BlogCard
                       key={index}
-                      imageUrl={item.imageUrl}
-                      blogTitle={item.blogTitle}
-                      tags={item.tags}
+                      imageUrl={item.fields.thumbnail?.fields?.file?.url}
+                      blogTitle={item.fields.title}
+                      tags={item.fields?.tags}
+                      slug={item.fields?.slug}
+        
                     />
                   );
-                })} */}
+                })}
               </div>
             )}
           </div>
@@ -90,3 +108,18 @@ const Blog = () => {
 };
 
 export default Blog;
+
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID || '',
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY || '',
+  });
+
+  const res = await client.getEntries({ content_type: 'blogPost' });
+
+  return {
+    props: {
+      blogPost: res.items,
+    },
+  };
+}
