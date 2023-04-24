@@ -52,31 +52,32 @@ const client = createClient({
   accessToken: process.env.CONTENTFUL_ACCESS_KEY || '',
 });
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const res = await client.getEntries({
-    content_type: 'blogPost',
-  });
 
-  const paths = res.items.map((item) => ({
-    params: { slug: item.fields.slug },
-  }));
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const res = await client.getEntries({
+//     content_type: 'blogPost',
+//   });
 
-  return {
-    paths,
-    fallback: false,
-  };
-};
+//   const paths = res.items.map((item) => ({
+//     params: { slug: item.fields.slug },
+//   }));
 
-export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
-  const { items } = await client.getEntries({
-    content_type: 'blogPost',
-    'fields.slug': params?.slug,
-  });
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };
 
-  return {
-    props: { article: items[0].fields },
-  };
-};
+// export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+//   const { items } = await client.getEntries({
+//     content_type: 'blogPost',
+//     'fields.slug': params?.slug,
+//   });
+
+//   return {
+//     props: { article: items[0].fields },
+//   };
+// };
 
 const Article: React.FC<Props> = ({ article }) => {
   const { theme } = useStateContext();
