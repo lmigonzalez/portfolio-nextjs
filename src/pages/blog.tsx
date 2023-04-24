@@ -86,7 +86,7 @@ const Blog: React.FC<Props> = ({ blogPost }) => {
               </div>
             ) : (
               <div className="flex flex-wrap justify-center gap-4 my-16 m-auto">
-                {blogPost.map((item, index) => {
+                {/* {blogPost.map((item, index) => {
                   return (
                     <BlogCard
                       key={index}
@@ -97,7 +97,7 @@ const Blog: React.FC<Props> = ({ blogPost }) => {
         
                     />
                   );
-                })}
+                })} */}
               </div>
             )}
           </div>

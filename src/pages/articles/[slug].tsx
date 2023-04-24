@@ -118,7 +118,7 @@ const Article: React.FC<Props> = ({ article }) => {
             theme === 'light' ? 'text-black' : 'text-white'
           } w-[700px] max-w-full m-auto px-4`}
         >
-          <div>
+          {/* <div>
             <h1
               className={`${theme === 'light' ? 'text-black' : 'text-white'}`}
             >
@@ -127,7 +127,7 @@ const Article: React.FC<Props> = ({ article }) => {
             <div className="">
               {documentToReactComponents(content, options)}
             </div>
-          </div>
+          </div> */}
         </article>
       </Layout>
     </>
