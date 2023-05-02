@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Script
         strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.MEASUREMENT_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
       />
 
       <Script id="google-analytics" strategy="lazyOnload">
@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
          function gtag(){dataLayer.push(arguments);}
          gtag('js', new Date());
        
-         gtag('config', '${process.env.MEASUREMENT_ID}');
+         gtag('config', '${process.env.NEXT_PUBLIC_MEASUREMENT_ID}');
     `}
       </Script>
 

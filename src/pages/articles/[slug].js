@@ -17,12 +17,11 @@ const renderAsset = (node, children) => {
 
 const renderCodeBlock = (node) => {
   const { code } = node.data;
-  console.log(code);
+
   return <pre>{code}</pre>;
 };
 
 const renderEmbeddedEntry = (node) => {
-  console.log(node);
   return (
     <pre>
       {' '}
@@ -40,8 +39,8 @@ const options = {
 };
 
 const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID || '',
-  accessToken: process.env.CONTENTFUL_ACCESS_KEY || '',
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY,
 });
 
 export const getStaticPaths = async () => {
@@ -71,7 +70,6 @@ export const getStaticProps = async ({ params }) => {
 };
 
 const Article = ({ article }) => {
-  console.log(article);
   const { theme } = useStateContext();
   const content = article?.article;
   return (

@@ -10,9 +10,6 @@ import Experience from '@/sections/Experience';
 import Testimonials from '@/sections/Testimonials';
 export default function Home() {
   const { theme } = useStateContext();
-
-  console.log(process.env.MAIL_PORT)
-
   return (
     <>
       <Head>
