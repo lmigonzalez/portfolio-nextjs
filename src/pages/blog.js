@@ -5,19 +5,19 @@ import BlogCard from '@/components/BlogCard';
 import { blogs } from '../data/Blogs';
 
 import { createClient } from 'contentful';
-interface BlogPost {
-  fields: {
-    tags: string[];
-    title: string;
-    thumbnail: string;
-  };
-}
+// interface BlogPost {
+//   fields: {
+//     tags: string[];
+//     title: string;
+//     thumbnail: string;
+//   };
+// }
 
-interface Props {
-  blogPost: BlogPost[];
-}
+// interface Props {
+//   blogPost: BlogPost[];
+// }
 
-const Blog: React.FC<Props> = ({ blogPost }) => {
+const Blog = ({ blogPost }) => {
   return (
     <>
       <Head>
