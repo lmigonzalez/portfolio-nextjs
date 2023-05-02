@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
+// import { GetStaticPaths, GetStaticProps } from 'next';
 import React from 'react';
 import Head from 'next/head';
 import { createClient } from 'contentful';
@@ -8,20 +8,20 @@ import { useStateContext } from '@/context/StateContext';
 
 import Layout from '../../components/layout/Layout';
 
-const renderAsset = (node: any, children: any) => {
+const renderAsset = (node, children) => {
   const { file } = node.data.target.fields;
   const url = file.url;
   const alt = file.description || file.fileName;
   return <img src={url} alt={alt} />;
 };
 
-const renderCodeBlock = (node: any) => {
+const renderCodeBlock = (node) => {
   const { code } = node.data;
   console.log(code);
   return <pre>{code}</pre>;
 };
 
-const renderEmbeddedEntry = (node: any) => {
+const renderEmbeddedEntry = (node) => {
   console.log(node);
   return (
     <pre>
@@ -39,20 +39,12 @@ const options = {
   },
 };
 
-interface Props {
-  article: {
-    title: string;
-    content: any;
-    article: any;
-  };
-}
-
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID || '',
   accessToken: process.env.CONTENTFUL_ACCESS_KEY || '',
 });
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths = async () => {
   const res = await client.getEntries({
     content_type: 'blogPost',
   });
@@ -67,7 +59,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+export const getStaticProps = async ({ params }) => {
   const { items } = await client.getEntries({
     content_type: 'blogPost',
     'fields.slug': params?.slug,
@@ -78,7 +70,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   };
 };
 
-const Article: React.FC<Props> = ({ article }) => {
+const Article = ({ article }) => {
   console.log(article);
   const { theme } = useStateContext();
   const content = article?.article;
