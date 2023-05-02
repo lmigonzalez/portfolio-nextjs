@@ -40,6 +40,10 @@
   article pre{
     @apply  text-blue_color bg-black p-4 rounded-md overflow-x-auto whitespace-pre-wrap
   }
+
+  article li{
+    @apply list-disc
+  }
 }
 
 @layer components {

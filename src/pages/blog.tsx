@@ -7,10 +7,10 @@ import { blogs } from '../data/Blogs';
 import { createClient } from 'contentful';
 interface BlogPost {
   fields: {
-    tags: string [];
+    tags: string[];
     title: string;
     thumbnail: string;
-  }
+  };
 }
 
 interface Props {
@@ -18,8 +18,6 @@ interface Props {
 }
 
 const Blog: React.FC<Props> = ({ blogPost }) => {
-
-  
   return (
     <>
       <Head>
@@ -76,7 +74,7 @@ const Blog: React.FC<Props> = ({ blogPost }) => {
               </div>
             )}
 
-            {blogs.length <= 0 ? (
+            {blogPost.length <= 0 ? (
               <div className="text-center">
                 {' '}
                 <p className="text-2xl">
@@ -86,20 +84,14 @@ const Blog: React.FC<Props> = ({ blogPost }) => {
               </div>
             ) : (
               <div className="flex flex-wrap justify-center gap-4 my-16 m-auto">
-                {blogs.map((item, index) => {
+                {blogPost.map((item, index) => {
                   return (
                     <BlogCard
-                      // key={index}
-                      // imageUrl={item.fields.thumbnail?.fields?.file?.url}
-                      // blogTitle={item.fields.title}
-                      // tags={item.fields?.tags}
-                      // slug={item.fields?.slug}
                       key={index}
-                      imageUrl={item.imageUrl}
-                      blogTitle={item.blogTitle}
-                      tags={item.tags}
-                      slug={''}
-        
+                      imageUrl={item.fields.thumbnail?.fields?.file?.url}
+                      blogTitle={item.fields.title}
+                      tags={item.fields?.tags}
+                      slug={item.fields?.slug}
                     />
                   );
                 })}

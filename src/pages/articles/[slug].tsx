@@ -52,34 +52,34 @@ const client = createClient({
   accessToken: process.env.CONTENTFUL_ACCESS_KEY || '',
 });
 
+export const getStaticPaths: GetStaticPaths = async () => {
+  const res = await client.getEntries({
+    content_type: 'blogPost',
+  });
 
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   const res = await client.getEntries({
-//     content_type: 'blogPost',
-//   });
+  const paths = res.items.map((item) => ({
+    params: { slug: item.fields.slug },
+  }));
 
-//   const paths = res.items.map((item) => ({
-//     params: { slug: item.fields.slug },
-//   }));
+  return {
+    paths,
+    fallback: false,
+  };
+};
 
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// };
+export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+  const { items } = await client.getEntries({
+    content_type: 'blogPost',
+    'fields.slug': params?.slug,
+  });
 
-// export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
-//   const { items } = await client.getEntries({
-//     content_type: 'blogPost',
-//     'fields.slug': params?.slug,
-//   });
-
-//   return {
-//     props: { article: items[0].fields },
-//   };
-// };
+  return {
+    props: { article: items[0].fields },
+  };
+};
 
 const Article: React.FC<Props> = ({ article }) => {
+  console.log(article);
   const { theme } = useStateContext();
   const content = article?.article;
   return (
@@ -119,7 +119,7 @@ const Article: React.FC<Props> = ({ article }) => {
             theme === 'light' ? 'text-black' : 'text-white'
           } w-[700px] max-w-full m-auto px-4`}
         >
-          {/* <div>
+          <div>
             <h1
               className={`${theme === 'light' ? 'text-black' : 'text-white'}`}
             >
@@ -128,7 +128,7 @@ const Article: React.FC<Props> = ({ article }) => {
             <div className="">
               {documentToReactComponents(content, options)}
             </div>
-          </div> */}
+          </div>
         </article>
       </Layout>
     </>
