@@ -75,7 +75,7 @@ const Article = ({ article }) => {
   return (
     <>
       <Head>
-        <title>Luis Gonzalez | Blog</title>
+        <title>{article.title}</title>
         <meta
           name="description"
           content="Read my latest blog posts and stay up-to-date with the latest trends in web development, web design, and more. Get inspired and learn something new today!"

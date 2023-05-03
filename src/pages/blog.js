@@ -116,7 +116,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      blogPost: res.items,
+      blogPost: res.items.reverse()
     },
   };
 }
