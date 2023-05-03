@@ -94,7 +94,7 @@ const About = () => {
                   As a freelance web developer, I have honed my client
                   management skills, and I am committed to providing you with
                   the highest level of customer service throughout the entire
-                  development process, whether you're a small business owner or
+                  development process, whether you&apos;re a small business owner or
                   a large corporation.
                 </p>
               </div>
@@ -145,7 +145,7 @@ const About = () => {
             <br />
             <p>
               If you need a skilled and experienced web developer in Miami, feel
-              free to contact me, and let's discuss how I can help you achieve
+              free to contact me, and let&apos;s discuss how I can help you achieve
               your online goals.
             </p>
           </div>
