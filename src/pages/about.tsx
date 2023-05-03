@@ -47,7 +47,7 @@ const About = () => {
               style={{ width: '50%' }}
             ></span>
           </div>
-
+          {/* &apos; */}
           <div className=" m-auto flex  gap-4 ">
             <div className="">
               <h4 className="text-xl font-bold mb-4">Welcome to my website!</h4>
@@ -64,34 +64,38 @@ const About = () => {
                   Web Developer based in sunny Miami, Florida.{' '}
                 </p>
                 <p>
-                  With a passion for coding and a keen eye for design, I
-                  specialize in creating beautiful, user-friendly web
-                  applications using the latest technologies.
+                  I have a passion for coding and a keen eye for design, which
+                  allows me to specialize in creating beautiful and
+                  user-friendly web applications using the latest technologies.
                 </p>
 
                 <p>
-                  I have a strong background in HTML, CSS, and Javascript, as
-                  well as experience with cutting-edge frameworks like React,
-                  Next, Angular, Node, and Express.{' '}
-                </p>
-                <p>
-                  I&apos;m also proficient in databases such as MongoDB and AWS,
-                  allowing me to create fast and efficient web applications that
+                  My expertise lies in HTML, CSS, and Javascript, and I have
+                  experience working with cutting-edge frameworks such as React,
+                  Next, Angular, Node, and Express. Additionally, I am
+                  proficient in databases such as MongoDB and MySQL, which
+                  enables me to create fast and efficient web applications that
                   are responsive to user needs.
                 </p>
+
                 <p>
-                  In addition to my development skills, I&apos;m also a talented
-                  UX/UI designer. Using tools like Figma, I create beautiful,
-                  intuitive designs that optimize the user experience and keep
-                  people coming back to your site.
+                  I am also a talented UX/UI designer who uses tools like Figma
+                  to create beautiful, intuitive designs that optimize the user
+                  experience and encourage visitors to return to your site.
                 </p>
                 <p>
-                  In addition to my development and design skills, I also have a
-                  solid foundation in SEO techniques. By optimizing websites for
-                  search engines, I can boost your online visibility and attract
-                  more visitors to your site. From keyword research to content
-                  optimization, I&apos;m well-versed in the latest SEO best
-                  practices and can help you achieve your online goals.
+                  Moreover, I possess a solid foundation in SEO techniques, and
+                  I can optimize your website to improve its search engine
+                  ranking, driving more traffic to your site and increasing your
+                  online visibility.
+                </p>
+
+                <p>
+                  As a freelance web developer, I have honed my client
+                  management skills, and I am committed to providing you with
+                  the highest level of customer service throughout the entire
+                  development process, whether you're a small business owner or
+                  a large corporation.
                 </p>
               </div>
             </div>
@@ -101,187 +105,49 @@ const About = () => {
           </div>
           <div className="space-y-3">
             <p>
-              I also possess strong client management skills. I have experience
-              working with clients to understand their unique needs and develop
-              solutions that exceed their expectations. I&apos;ve been working
-              as a freelance web developer for a few months now, which has
-              allowed me to hone my client management skills while delivering
-              top-notch work.{' '}
+              Some common problems that clients face are poor website
+              performance, inconsistent or outdated website design, difficulty
+              managing website content, poor search engine ranking, security
+              vulnerabilities, limited mobile responsiveness, and limited user
+              engagement.
             </p>
             <p>
-              Whether you&apos;re a small business owner or a large corporation,
-              I&apos;m committed to providing you with the highest level of
-              customer service throughout the entire development process.
+              However, I have a solution for each of these problems, such as
+              optimizing website speed and performance, creating a modern and
+              intuitive design, developing a custom content management system,
+              implementing security measures, developing a responsive design,
+              and utilizing UX/UI design principles.
             </p>
           </div>
           <div className="space-y-4 py-8  w-full">
             <h4 className="text-start text-xl font-bold mb-4 ">
-              Problems you may have and the solution I offer
+              My expertise includes:
             </h4>
             <div>
-              <strong>Poor website performance or slow loading times</strong>
-              <p>
-                I can optimize website speed and performance by implementing
-                best practices such as caching, image compression, and code
-                optimization.
-              </p>
+              <ul>
+                <li>Custom web development</li>
+                <li>UX/UI design</li>
+                <li>Search engine optimization (SEO)</li>
+                <li>Content management systems (CMS)</li>
+                <li>E-commerce development</li>
+                <li>Web hosting and maintenance</li>
+                <li>Mobile App Development (IOS and Android)</li>
+              </ul>
             </div>
             <div>
-              <strong>Inconsistent or outdated website design </strong>
               <p>
-                {' '}
-                As a skilled UX/UI designer, I can create a modern, intuitive
-                design that aligns with your brand and attracts visitors to your
-                site.
+                I bring technical expertise, design skills, client management
+                skills, SEO skills, responsive design, and custom solutions to
+                the table. I also offer competitive pricing for my services,
+                ensuring you receive high-quality solutions within your budget.
               </p>
             </div>
-            <div>
-              <strong>Difficulty managing website content</strong>
-              <p>
-                I can develop a custom content management system (CMS) that
-                makes it easy for you to update and manage website content
-                without any technical knowledge.
-              </p>
-            </div>
-            <div>
-              <strong>Poor search engine ranking</strong>
-              <p>
-                I can implement SEO best practices to improve your search engine
-                ranking and drive more traffic to your site.
-              </p>
-            </div>
-            <div>
-              <strong>Security vulnerabilities Solution</strong>
-              <p>
-                I can implement security measures such as SSL certificates,
-                firewalls, and regular backups to protect your website from
-                attacks.
-              </p>
-            </div>
-            <div>
-              <strong>Limited mobile responsiveness</strong>
-              <p>
-                I can develop a responsive design that adapts to different
-                screen sizes, ensuring your website looks great on desktop,
-                tablet, and mobile devices.
-              </p>
-            </div>
-            <div>
-              <strong>Limited user engagement</strong>
-              <p>
-                By utilizing UX/UI design principles, I can create engaging user
-                experiences that keep visitors on your site and encourage them
-                to take action.
-              </p>
-            </div>
-          </div>
-
-          <div className="w-full py-8 ">
-            <h3
-              className={`text-xl mb-4 ${
-                theme === 'light' ? 'text-black' : 'text-white'
-              }`}
-            >
-              My Expertise:
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                {' '}
-                <b>Custom web development:</b> I can build custom web
-                applications tailored to your unique needs, whether it&apos;s a
-                simple marketing website, a complex e-commerce platform, or a
-                sophisticated web-based tool.
-              </li>
-              <li>
-                {' '}
-                <b>UX/UI design:</b> I can create beautiful, user-friendly
-                designs that optimize the user experience and keep visitors
-                engaged with your brand.
-              </li>
-              <li>
-                {' '}
-                <b>Search engine optimization (SEO):</b> I can optimize your
-                website to improve its search engine ranking, driving more
-                traffic to your site and increasing your online visibility.
-              </li>
-              <li>
-                {' '}
-                <b>Content management systems (CMS):</b> I can develop custom
-                CMS solutions that make it easy for you to manage and update
-                your website content without any technical knowledge.
-              </li>
-              <li>
-                {' '}
-                <b>E-commerce development:</b> I can develop e-commerce
-                platforms that are tailored to your unique business needs,
-                whether it&apos;s a simple online store or a complex
-                marketplace.
-              </li>
-              <li>
-                {' '}
-                <b>Web hosting and maintenance:</b> I can provide web hosting
-                and maintenance services to ensure that your website is always
-                up-to-date, secure, and running smoothly.
-              </li>
-            </ul>
-          </div>
-
-          <div className="w-full py-8 ">
-            <h3
-              className={`text-xl mb-4 ${
-                theme === 'light' ? 'text-black' : 'text-white'
-              }`}
-            >
-              What I bring to the table:
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                {' '}
-                <b>Technical expertise:</b> With extensive experience in web
-                development technologies such as HTML, CSS, Javascript,
-                Typescript, React, Next, Angular, Node, Express, MongoDB, AWS,
-                and more, I have the technical expertise to deliver high-quality
-                solutions that meet your unique needs.
-              </li>
-              <li>
-                {' '}
-                <b>Design skills:</b> As a skilled UX/UI designer, I can create
-                beautiful, intuitive designs that optimize the user experience
-                and align with your brand.
-              </li>
-              <li>
-                {' '}
-                <b>Client management skills:</b> I have experience working with
-                clients to understand their needs and develop solutions that
-                exceed their expectations. I&apos;m committed to providing the
-                highest level of customer service throughout the entire
-                development process.
-              </li>
-              <li>
-                {' '}
-                <b>SEO skills:</b> By optimizing your website for search
-                engines, I can help boost your online visibility and attract
-                more visitors to your site.
-              </li>
-              <li>
-                {' '}
-                <b>Responsive design:</b> I can develop responsive designs that
-                adapt to different screen sizes, ensuring that your website
-                looks great on desktop, tablet, and mobile devices.
-              </li>
-              <li>
-                {' '}
-                <b>Custom solutions:</b> I can create custom solutions tailored
-                to your unique needs, whether it&apos;s a simple marketing
-                website or a complex e-commerce platform.
-              </li>
-              <li>
-                {' '}
-                <b>Competitive pricing:</b> I offer competitive pricing for my
-                services, ensuring you receive high-quality solutions within
-                your budget.
-              </li>
-            </ul>
+            <br />
+            <p>
+              If you need a skilled and experienced web developer in Miami, feel
+              free to contact me, and let's discuss how I can help you achieve
+              your online goals.
+            </p>
           </div>
 
           {/* personal inf */}
