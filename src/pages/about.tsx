@@ -58,7 +58,7 @@ const About = () => {
                 height={400}
                 className="mb-2 md:mb-0 md:float-right md:ml-4"
               />
-              <div className="space-y-3 ">
+              <div className="space-y-3">
                 <p>
                   My name is Luis Gonzalez, and I&apos;m a skilled Full-Stack
                   Web Developer based in sunny Miami, Florida.{' '}

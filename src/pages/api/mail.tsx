@@ -1,7 +1,7 @@
 const mail = async (req: any, res: any) => {
   const { fullName, email, note } = req.body;
   let nodemailer = require('nodemailer');
-  console.log(process.env.MAIL_USER);
+
   try {
     const transport = nodemailer.createTransport({
       host: process.env.MAIL_HOST,
@@ -25,7 +25,7 @@ const mail = async (req: any, res: any) => {
     });
     res.status(201).json(req.body);
   } catch (err) {
-    console.log(err);
+
     res.status(400).json({ message: 'something bad happen' });
   }
 };

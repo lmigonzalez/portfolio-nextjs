@@ -19,21 +19,21 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image src="mail.svg" alt="" width={40} height={40} />
+          <Image src="/mail.svg" alt="" width={40} height={40} />
         </Link>
         <Link
           href="https://www.linkedin.com/in/lmigonzalezs/"
           target="_blank"
           rel="noopener"
         >
-          <Image src="linkedin.svg" alt="" width={40} height={40} />
+          <Image src="/linkedin.svg" alt="" width={40} height={40} />
         </Link>
         <Link
           href="https://github.com/lmigonzalez"
           target="_blank"
           rel="noopener"
         >
-          <Image src="github.svg" alt="" width={40} height={30} />
+          <Image src="/github.svg" alt="" width={40} height={30} />
         </Link>
 
       </div>

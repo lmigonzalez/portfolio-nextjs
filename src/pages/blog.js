@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from '@/components/layout/Layout';
 import BlogCard from '@/components/BlogCard';
-import { blogs } from '../data/Blogs';
 
 import { createClient } from 'contentful';
-// interface BlogPost {
-//   fields: {
-//     tags: string[];
-//     title: string;
-//     thumbnail: string;
-//   };
-// }
-
-// interface Props {
-//   blogPost: BlogPost[];
-// }
 
 const Blog = ({ blogPost }) => {
+  const [filterBlogs, setFilterBlogs] = useState([]);
+  const [inputValue, setInputValue] = useState('');
+
+  function handleFilterChange(e) {
+    const value = e.target.value;
+    setInputValue(value);
+
+    // Filter the blogs based on the title
+    const filteredBlogs = blogPost.filter((item) => {
+      return item.fields.title.toLowerCase().includes(value.toLowerCase());
+    });
+
+    // Update the filterBlogs state with the filtered blogs
+    setFilterBlogs(filteredBlogs);
+  }
+
+ 
+
   return (
     <>
       <Head>
@@ -64,39 +70,42 @@ const Blog = ({ blogPost }) => {
             </p>
           </div>
           <div className="w-full">
-            {blogs.length > 0 && (
-              <div className="w-full h-10 flex justify-center">
-                <input
-                  type="text"
-                  placeholder="Search for blogs"
-                  className="w-[700px] h-full max-w-full border-2 border- rounded px-4"
-                />
-              </div>
-            )}
+            <div className="w-full h-10 flex justify-center">
+              <input
+                onChange={handleFilterChange}
+                name="search"
+                value={inputValue}
+                type="text"
+                placeholder="Search for blogs"
+                className="w-[700px] h-full max-w-full border-2 border- rounded px-4 text-black_color"
+              />
+            </div>
 
-            {blogPost.length <= 0 ? (
-              <div className="text-center">
-                {' '}
-                <p className="text-2xl">
-                  There are currently no blogs available, please stay tuned for
-                  future updates.
-                </p>{' '}
-              </div>
-            ) : (
-              <div className="flex flex-wrap justify-center gap-4 my-16 m-auto">
-                {blogPost.map((item, index) => {
-                  return (
-                    <BlogCard
-                      key={index}
-                      imageUrl={item.fields.thumbnail?.fields?.file?.url}
-                      blogTitle={item.fields.title}
-                      tags={item.fields?.tags}
-                      slug={item.fields?.slug}
-                    />
-                  );
-                })}
-              </div>
-            )}
+            <div className="flex flex-wrap justify-center gap-4 my-16 m-auto">
+              {inputValue.length > 0 && filterBlogs.length === 0 ? (
+                <p className='text-xl'>No blogs found</p>
+              ) : inputValue.length > 0 ? (
+                filterBlogs.map((item, index) => (
+                  <BlogCard
+                    key={index}
+                    imageUrl={item.fields.thumbnail?.fields?.file?.url}
+                    blogTitle={item.fields.title}
+                    tags={item.fields?.tags}
+                    slug={item.fields?.slug}
+                  />
+                ))
+              ) : (
+                blogPost.map((item, index) => (
+                  <BlogCard
+                    key={index}
+                    imageUrl={item.fields.thumbnail?.fields?.file?.url}
+                    blogTitle={item.fields.title}
+                    tags={item.fields?.tags}
+                    slug={item.fields?.slug}
+                  />
+                ))
+              )}
+            </div>
           </div>
         </div>
       </Layout>
@@ -116,7 +125,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      blogPost: res.items.reverse()
+      blogPost: res.items.reverse(),
     },
   };
 }

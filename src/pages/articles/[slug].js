@@ -1,12 +1,12 @@
-// import { GetStaticPaths, GetStaticProps } from 'next';
 import React from 'react';
 import Head from 'next/head';
+import { useStateContext } from '@/context/StateContext';
+import Layout from '../../components/layout/Layout';
 import { createClient } from 'contentful';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { useStateContext } from '@/context/StateContext';
-
-import Layout from '../../components/layout/Layout';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { agate } from 'react-syntax-highlighter/dist/cjs/styles/prism'; // Choose your preferred code highlighting style
 
 const renderAsset = (node, children) => {
   const { file } = node.data.target.fields;
@@ -15,26 +15,47 @@ const renderAsset = (node, children) => {
   return <img src={url} alt={alt} />;
 };
 
-const renderCodeBlock = (node) => {
-  const { code } = node.data;
-
-  return <pre>{code}</pre>;
-};
-
 const renderEmbeddedEntry = (node) => {
+  const { code } = node.data.target.fields;
   return (
-    <pre>
-      {' '}
-      <code>{node.data.target.fields.code}</code>{' '}
-    </pre>
+    <SyntaxHighlighter
+      language="javascript"
+      style={agate}
+      wrapLongLines={true}
+      wrapLines={false}
+      lineProps={{ style: { flexWrap: 'wrap' } }}
+    >
+      {code}
+    </SyntaxHighlighter>
   );
 };
 
 const options = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: renderAsset,
-    [MARKS.CODE]: renderCodeBlock,
     [BLOCKS.EMBEDDED_ENTRY]: renderEmbeddedEntry,
+    [BLOCKS.PARAGRAPH]: (node, children) => {
+      if (node.content && node.content[0] && node.content[0].value) {
+        const isCodeSnippet =
+          node.content[0].nodeType === 'text' &&
+          node.content[0].marks.some((mark) => mark.type === 'code');
+        if (isCodeSnippet) {
+          const code = node.content[0].value.trim();
+          return (
+            <SyntaxHighlighter
+              language="javascript"
+              style={agate}
+              wrapLongLines={true}
+              wrapLines={false}
+              lineProps={{ style: { flexWrap: 'wrap' } }}
+            >
+              {code}
+            </SyntaxHighlighter>
+          );
+        }
+      }
+      return <p>{children}</p>;
+    },
   },
 };
 
@@ -72,37 +93,10 @@ export const getStaticProps = async ({ params }) => {
 const Article = ({ article }) => {
   const { theme } = useStateContext();
   const content = article?.article;
+
   return (
     <>
-      <Head>
-        <title>{article.title}</title>
-        <meta
-          name="description"
-          content="Read my latest blog posts and stay up-to-date with the latest trends in web development, web design, and more. Get inspired and learn something new today!"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
-      </Head>
+      <Head>{/* Head content */}</Head>
       <Layout>
         <article
           className={`${

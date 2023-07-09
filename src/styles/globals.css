@@ -37,12 +37,13 @@
     @apply my-4 text-lg leading-8 font-light
   }
 
-  article pre{
-    @apply  text-blue_color bg-black p-4 rounded-md overflow-x-auto whitespace-pre-wrap
-  }
 
   article li{
     @apply list-disc
+  }
+
+  pre{
+    @apply rounded bg-gray-100
   }
 }
 
