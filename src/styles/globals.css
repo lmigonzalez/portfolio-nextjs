@@ -41,10 +41,10 @@
   article li{
     @apply list-disc
   }
-
+/* 
   pre{
     @apply rounded bg-gray-100
-  }
+  } */
 }
 
 @layer components {
