@@ -29,7 +29,7 @@
   }
 
  article h2, article h3{
-    @apply text-black text-xl text-current my-4 font-semibold
+    @apply text-black text-2xl text-current mt-20 mb-4 font-semibold
   }
 
 
@@ -41,10 +41,10 @@
   article li{
     @apply list-disc
   }
-/* 
+
   pre{
     @apply rounded bg-gray-100
-  } */
+  }
 }
 
 @layer components {
