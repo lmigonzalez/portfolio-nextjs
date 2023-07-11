@@ -38,8 +38,9 @@ const Footer = () => {
 
       </div>
       <p>
-        ©2023 Luis Gonzalez - All rights reserved | <Link href="">Terms</Link> |{' '}
-        <Link href="">Privacy</Link>{' '}
+        ©2023 Luis Gonzalez - All rights reserved 
+        {/* | <Link href="">Terms</Link> |{' '}
+        <Link href="">Privacy</Link>{' '} */}
       </p>
     </footer>
   );
