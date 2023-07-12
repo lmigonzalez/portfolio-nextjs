@@ -43,7 +43,7 @@
   }
 
     article a{
-    @apply text-my_blue font-medium
+    @apply text-blue_color font-medium
   }
 
   pre{
