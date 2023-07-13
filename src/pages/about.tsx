@@ -42,6 +42,7 @@ const About = () => {
         <div className="flex flex-col items-center justify-center space-y-3 py-16 w-[1400px] max-w-full px-4 m-auto leading-7">
           <div className="relative w-fit py-2 m-auto mb-10">
             <h1 className="">About me</h1>
+
             <span
               className="block h-1 gradient-color absolute bottom-0 right-0 transform -translate-x-1 translate-y-1/2"
               style={{ width: '50%' }}
@@ -50,6 +51,7 @@ const About = () => {
           {/* &apos; */}
           <div className=" m-auto flex  gap-4 ">
             <div className="">
+             
               <h4 className="text-xl font-bold mb-4">Welcome to my website!</h4>
               <Image
                 src={'/Luis-Gonzalez.png'}
@@ -94,8 +96,8 @@ const About = () => {
                   As a freelance web developer, I have honed my client
                   management skills, and I am committed to providing you with
                   the highest level of customer service throughout the entire
-                  development process, whether you&apos;re a small business owner or
-                  a large corporation.
+                  development process, whether you&apos;re a small business
+                  owner or a large corporation.
                 </p>
               </div>
             </div>
@@ -145,8 +147,8 @@ const About = () => {
             <br />
             <p>
               If you need a skilled and experienced web developer in Miami, feel
-              free to contact me, and let&apos;s discuss how I can help you achieve
-              your online goals.
+              free to contact me, and let&apos;s discuss how I can help you
+              achieve your online goals.
             </p>
           </div>
 
