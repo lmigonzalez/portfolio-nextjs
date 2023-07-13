@@ -42,6 +42,10 @@
     @apply list-disc
   }
 
+    article a{
+    @apply text-blue_color font-medium
+  }
+
   pre{
     @apply rounded bg-gray-100
   }
