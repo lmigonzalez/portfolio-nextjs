@@ -19,41 +19,39 @@
     @apply font-bold text-4xl text-orange_color;
   }
 
-
-  article{
-    @apply py-8
+  article {
+    @apply py-8;
   }
 
-  article h1{
-    @apply text-black text-3xl text-current my-4
+  article h1 {
+    @apply text-black text-3xl text-current my-4;
   }
 
- article h2, article h3{
-    @apply text-black text-2xl text-current mt-20 mb-4 font-semibold
+  article h2,
+  article h3 {
+    @apply text-black text-2xl text-current mt-20 mb-4 font-semibold;
   }
 
-
-  article p{
-    @apply my-4 text-lg leading-8 font-light
+  article p {
+    @apply my-4 text-lg leading-8 font-light;
   }
 
-
-  article li{
-    @apply list-disc
+  article li {
+    @apply list-disc;
   }
 
-    article a{
-    @apply text-blue_color font-medium
+  article a {
+    @apply text-blue_color font-medium;
   }
 
-  pre{
-    @apply rounded bg-gray-100
+  pre {
+    @apply rounded bg-gray-100;
   }
 }
 
 @layer components {
   .gradient-color {
-    background: #FF6000;
+    background: #ff6000;
   }
 
   .text-color {
@@ -82,6 +80,22 @@
     display: none;
   }
 
+  article table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  article th,
+  article td {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: left;
+  }
+  article th {
+    background-color: #f2f2f2;
+  }
 
-
+  article b {
+    color: #d80027;
+    font-weight: 600;
+  }
 }
