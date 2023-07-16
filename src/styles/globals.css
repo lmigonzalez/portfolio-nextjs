@@ -90,12 +90,8 @@
     padding: 5px 8px;
     text-align: left;
   }
-  article th {
-    background-color: #000000;
-  }
 
   article b {
-    color: #d80027;
     font-weight: 600;
   }
 }
