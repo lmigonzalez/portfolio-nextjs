@@ -83,6 +83,7 @@
   article table {
     width: 100%;
     border-collapse: collapse;
+    margin: 1rem 0;
   }
   article th,
   article td {
@@ -93,5 +94,8 @@
 
   article b {
     font-weight: 600;
+  }
+  article table p{
+    margin: 5px 0;
   }
 }
