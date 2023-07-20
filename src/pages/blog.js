@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from '@/components/layout/Layout';
 import BlogCard from '@/components/BlogCard';
-
+import ReactPaginate from 'react-paginate';
 import { createClient } from 'contentful';
 
 const Blog = ({ blogPost }) => {
@@ -22,7 +22,36 @@ const Blog = ({ blogPost }) => {
     setFilterBlogs(filteredBlogs);
   }
 
- 
+  // pagination
+  const [pageNumber, setPageNumber] = useState(0);
+  const blogsPerPage = 9;
+  const pagesVisited = pageNumber * blogsPerPage;
+
+  function SelectedBlogs() {
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {blogPost
+          .slice(pagesVisited, pagesVisited + blogsPerPage)
+          .map((item, index) => {
+            return (
+              <BlogCard
+                key={index}
+                imageUrl={item.fields.thumbnail?.fields?.file?.url}
+                blogTitle={item.fields.title}
+                tags={item.fields?.tags}
+                slug={item.fields?.slug}
+              />
+            );
+          })}
+      </div>
+    );
+  }
+
+  const pageCount = Math.ceil(blogPost.length / blogsPerPage);
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
 
   return (
     <>
@@ -83,7 +112,7 @@ const Blog = ({ blogPost }) => {
 
             <div className="flex flex-wrap justify-center gap-4 my-16 m-auto">
               {inputValue.length > 0 && filterBlogs.length === 0 ? (
-                <p className='text-xl'>No blogs found</p>
+                <p className="text-xl">No blogs found</p>
               ) : inputValue.length > 0 ? (
                 filterBlogs.map((item, index) => (
                   <BlogCard
@@ -95,17 +124,54 @@ const Blog = ({ blogPost }) => {
                   />
                 ))
               ) : (
-                blogPost.map((item, index) => (
-                  <BlogCard
-                    key={index}
-                    imageUrl={item.fields.thumbnail?.fields?.file?.url}
-                    blogTitle={item.fields.title}
-                    tags={item.fields?.tags}
-                    slug={item.fields?.slug}
-                  />
-                ))
+                <SelectedBlogs />
               )}
             </div>
+          </div>
+          <div className="w-full flex justify-center items-center py-8 px-4">
+            <ReactPaginate
+              previousLabel={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1}
+                  stroke="currentColor"
+                  className="w-10 h-10 "
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              }
+              nextLabel={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1}
+                  stroke="currentColor"
+                  className="w-10 h-10"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              }
+              pageCount={pageCount}
+              onPageChange={changePage}
+              containerClassName={
+                'flex items-center justify-center space-x-4 text-[20px]'
+              }
+              previousLinkClassName={''}
+              nextLinkClassName={''}
+              disabledClassName={'text-[#D8D8D8]'}
+              activeClassName={'bg-orange_color text-white  px-2 py-1 rounded'}
+            />
           </div>
         </div>
       </Layout>

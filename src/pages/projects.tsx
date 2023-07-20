@@ -13,7 +13,7 @@ const Projects = () => {
   const projectsPerPage = 5;
   const pagesVisited = pageNumber * projectsPerPage;
 
-  function SelectedProducts() {
+  function SelectedProjects() {
     return (
       <div className="space-y-10">
         {projects
@@ -93,7 +93,7 @@ const Projects = () => {
           </div>
 
           <div className="">
-            <SelectedProducts />
+            <SelectedProjects />
           </div>
           <div className="w-full flex justify-center items-center py-8 px-4">
             <ReactPaginate
