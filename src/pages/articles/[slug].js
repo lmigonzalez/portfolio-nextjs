@@ -93,10 +93,17 @@ export const getStaticProps = async ({ params }) => {
 const Article = ({ article }) => {
   const { theme } = useStateContext();
   const content = article?.article;
-
   return (
     <>
-      <Head>{/* Head content */}</Head>
+      <Head>
+        <title>{article.title}</title>
+        <meta name="description" content={article.description} />
+        {/* <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="article" /> */}
+      </Head>
       <Layout>
         <article
           className={`${
