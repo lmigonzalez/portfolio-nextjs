@@ -96,7 +96,7 @@ const Article = ({ article }) => {
   return (
     <>
       <Head>
-        <title>{article.title}</title>
+        <title>{article.title} | Luis Gonzalez</title>
         <meta name="description" content={article.description} />
         {/* <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
