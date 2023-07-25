@@ -17,7 +17,7 @@ const createSitemap = (articles) => {
   // Add your website's homepage to the sitemap
   xml += `
     <url>
-      <loc>https://www.example.com/</loc>
+      <loc>https://www.luisgonzalezdev.org/</loc>
       <lastmod>${format(new Date(), 'yyyy-MM-dd')}</lastmod>
       <changefreq>daily</changefreq>
       <priority>1.0</priority>
@@ -29,7 +29,7 @@ const createSitemap = (articles) => {
     const updatedAt = article.sys.updatedAt;
     xml += `
     <url>
-      <loc>https://www.example.com/articles/${slug}</loc>
+      <loc>https://www.luisgonzalezdev.org/articles/${slug}</loc>
       <lastmod>${format(new Date(updatedAt), 'yyyy-MM-dd')}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
