@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import Image from 'next/image';
-import Layout from '@/components/layout/Layout';
+import React, { useState } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+import Layout from "@/components/layout/Layout";
 const Services = () => {
   const [hoverBox, setHoverBox] = useState(0);
   const [isHover, setIsHover] = useState(false);
@@ -54,7 +54,7 @@ const Services = () => {
               <h1 className="">Services</h1>
               <span
                 className="block h-1 gradient-color absolute bottom-0 right-0 transform -translate-x-1 translate-y-1/2"
-                style={{ width: '50%' }}
+                style={{ width: "50%" }}
               ></span>
             </div>
             <p className="text-lg text-center">
@@ -70,7 +70,7 @@ const Services = () => {
             <p className="m-auto max-w-[700px]">
               I am consistently thrilled about acquiring new knowledge. Hence,
               if there&apos;s something you require that isn&apos;t listed,
-              please don&apos;t hesitate to{' '}
+              please don&apos;t hesitate to{" "}
               <Link className="text-blue_color font-semibold" href="/contact">
                 contact me.
               </Link>
@@ -89,7 +89,7 @@ const Services = () => {
                 </div>
                 <div
                   className={`flex items-center justify-center px-2 bg-blue_color overflow-auto transition-all  duration-300 w-full absolute bottom-0 left-0 ${
-                    hoverBox === 1 && isHover ? 'h-full' : 'h-0'
+                    hoverBox === 1 && isHover ? "h-full" : "h-0"
                   }`}
                 >
                   {hoverBox === 1 && isHover && (
@@ -112,19 +112,22 @@ const Services = () => {
               >
                 <div className="flex flex-col items-center justify-center text-white gap-2">
                   <Image src="/coding (1).png" alt="" width={64} height={64} />
-                  <strong>Custom Web Development</strong>
+                  <strong>Frontend Developer</strong>
                 </div>
                 <div
                   className={`flex items-center justify-center px-2 bg-blue_color overflow-auto transition-all  duration-300 w-full absolute bottom-0 left-0 ${
-                    hoverBox === 2 && isHover ? 'h-full' : 'h-0'
+                    hoverBox === 2 && isHover ? "h-full" : "h-0"
                   }`}
                 >
                   {hoverBox === 2 && isHover && (
                     <p className="text-black">
-                      Need a website that works flawlessly and delivers a
-                      seamless user experience? Our web development services
-                      have got you covered. Let me build you a website that not
-                      only looks great but also performs at its best.
+                      I specialize in creating engaging and responsive user
+                      interfaces using a stack of cutting-edge technologies.
+                      With expertise in TypeScript, React, Next.js, Tailwind
+                      CSS, JavaScript, CSS, and HTML, I craft visually stunning
+                      and highly interactive web applications. My focus on
+                      responsive design ensures that your website or web app
+                      looks and functions seamlessly across all devices.
                     </p>
                   )}
                 </div>
@@ -138,27 +141,23 @@ const Services = () => {
                 className="bg-[#191825] md:bg-orange_color lg:bg-[#191825] h-[300px]  cursor-pointer relative flex items-center justify-center"
               >
                 <div className="flex flex-col items-center justify-center text-white gap-2">
-                  <Image
-                    src="/mobile-development.png"
-                    alt=""
-                    width={64}
-                    height={64}
-                  />
-                  <strong>Mobile App Development</strong>
+                  <Image src="/api.png" alt="" width={64} height={64} />
+
+                  <strong>Backend Developer</strong>
                 </div>
                 <div
                   className={`flex items-center justify-center px-2 bg-blue_color overflow-auto transition-all  duration-300 w-full absolute bottom-0 left-0 ${
-                    hoverBox === 3 && isHover ? 'h-full' : 'h-0'
+                    hoverBox === 3 && isHover ? "h-full" : "h-0"
                   }`}
                 >
                   {hoverBox === 3 && isHover && (
                     <p className="text-black">
-                      Bring your app idea to life with our top-notch app
-                      development services. From concept to launch, I&apos;ll
-                      work with you every step of the way to build a
-                      high-quality and user-friendly app that meets your
-                      specific needs and requirements. Let&apos;s create
-                      something amazing together.
+                      With expertise in Node.js, Express, MongoDB, MySQL, and a
+                      range of other technologies, I specialize in crafting
+                      robust and efficient web APIs. Whether you need to build
+                      APIs from scratch, optimize existing ones, or ensure
+                      seamless data flow for your web applications, I&apos;ve got you
+                      covered.
                     </p>
                   )}
                 </div>
@@ -173,27 +172,26 @@ const Services = () => {
               >
                 <div className="flex flex-col items-center justify-center text-white gap-2">
                   <Image
-                    src="/mobile-shopping.png"
+                    src="/mobile-development.png"
                     alt=""
                     width={64}
                     height={64}
                   />
-                  <strong>E-commerce</strong>
+                  <strong>Mobile App Development</strong>
                 </div>
                 <div
                   className={`flex items-center justify-center px-2 bg-blue_color overflow-auto transition-all  duration-300 w-full absolute bottom-0 left-0 ${
-                    hoverBox === 4 && isHover ? 'h-full' : 'h-0'
+                    hoverBox === 4 && isHover ? "h-full" : "h-0"
                   }`}
                 >
                   {hoverBox === 4 && isHover && (
                     <p className="text-black">
-                      Looking to start an online store? My e-commerce website
-                      development services can help you create a powerful and
-                      easy-to-use online store that drives sales and growth.
-                      From shopping cart integration to payment gateway setup,
-                      we&apos;ve got everything you need to get your business up
-                      and running online. Let&apos;s build your e-commerce
-                      website today.
+                      Bring your app idea to life with our top-notch app
+                      development services. From concept to launch, I&apos;ll
+                      work with you every step of the way to build a
+                      high-quality and user-friendly app that meets your
+                      specific needs and requirements. Let&apos;s create
+                      something amazing together.
                     </p>
                   )}
                 </div>
@@ -212,7 +210,7 @@ const Services = () => {
                 </div>
                 <div
                   className={`flex items-center justify-center px-2 bg-blue_color overflow-auto transition-all  duration-300 w-full absolute bottom-0 left-0 ${
-                    hoverBox === 5 && isHover ? 'h-full' : 'h-0'
+                    hoverBox === 5 && isHover ? "h-full" : "h-0"
                   }`}
                 >
                   {hoverBox === 5 && isHover && (
@@ -235,29 +233,24 @@ const Services = () => {
                 className="bg-orange_color h-[300px]  cursor-pointer relative flex items-center justify-center"
               >
                 <div className="flex flex-col items-center justify-center text-white gap-2">
-                  <Image
-                    src="/wordpress (1).png"
-                    alt=""
-                    width={64}
-                    height={64}
-                  />
-                  <strong>Wordpress</strong>
+                  <Image src="/shopify.png" alt="" width={100} height={100} />
+                  <strong>Shopify Developer</strong>
                 </div>
                 <div
                   className={`flex items-center justify-center px-2 bg-blue_color transition-all  duration-300 w-full absolute bottom-0 left-0 overflow-auto ${
-                    hoverBox === 6 && isHover ? 'h-full' : 'h-0'
+                    hoverBox === 6 && isHover ? "h-full" : "h-0"
                   }`}
                 >
                   {hoverBox === 6 && isHover && (
                     <p className={`text-black`}>
-                      Looking to build or optimize your website on WordPress? My
-                      WordPress development and optimization services can help
-                      you create a high-performing website that is visually
-                      stunning and user-friendly. I&apos;ll help you with
-                      everything from theme customization to plugin
-                      installation, security optimization, and speed
-                      optimization. Let&apos;s make your WordPress website stand
-                      out from the crowd.
+                      Seeking a Shopify Developer to enhance your online store?
+                      As an experienced Shopify developer, I specialize in using
+                      Shopify Liquid to add custom features and optimize your
+                      e-commerce website. Whether you need theme customization,
+                      plugin installation, security optimization, or speed
+                      improvements, I can help you create a visually stunning
+                      and user-friendly Shopify store that stands out from the
+                      competition.
                     </p>
                   )}
                 </div>

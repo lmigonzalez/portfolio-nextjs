@@ -1,6 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
-import {useStateContext} from '../context/StateContext'
+import React from "react";
+import Image from "next/image";
+import { useStateContext } from "../context/StateContext";
 interface TestimonialCardProps {
   message: string;
   source: string;
@@ -16,7 +16,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   name,
   gender,
 }) => {
-  const {theme} = useStateContext()
+  const { theme } = useStateContext();
   const starsComponent = calculateStars();
 
   function calculateStars() {
@@ -32,11 +32,17 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   }
 
   return (
-    <div className= {`relative px-4 pt-4 pb-16 shadow-lg border-[1px] ${theme === 'light' ? 'bg-white border-black_color': 'bg-black_color border-white'}  rounded-md h-52`}>
+    <div
+      className={`relative px-4 pt-4 pb-16 shadow-lg border-[1px] ${
+        theme === "light"
+          ? "bg-white border-black_color"
+          : "bg-black_color border-white"
+      }  rounded-md h-52`}
+    >
       <div>
         <div className="flex mb-3">
           {starsComponent.map((item, index) => {
-            return( <div key={index}> {item} </div> )
+            return <div key={index}> {item} </div>;
           })}
         </div>
 
@@ -47,7 +53,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         <div className="flex gap-2">
           <div>
             <Image
-              src={gender === 'man' ? '/man.png' : '/women.png'}
+              src={gender === "man" ? "/man.png" : "/women.png"}
               alt="user avatar"
               width={25}
               height={25}
@@ -55,11 +61,6 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           </div>
 
           <p className="">{name}</p>
-        </div>
-        <div>
-          <p className="font-semibold bg-blue_color px-2 py-1 rounded-md text-black">
-            {source}
-          </p>
         </div>
       </div>
     </div>

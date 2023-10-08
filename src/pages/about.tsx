@@ -54,10 +54,10 @@ const About = () => {
              
               <h4 className="text-xl font-bold mb-4">Welcome to my website!</h4>
               <Image
-                src={'/Luis-Gonzalez.png'}
+                src={'/Luis G.png'}
                 alt=""
-                width={350}
-                height={400}
+                width={250}
+                height={250}
                 className="mb-2 md:mb-0 md:float-right md:ml-4"
               />
               <div className="space-y-3">

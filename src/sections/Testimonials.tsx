@@ -1,6 +1,7 @@
-import React from 'react';
-import TestimonialCard from '@/components/TestimonialCard';
-import { testimonials } from '../data/Data';
+import React from "react";
+import TestimonialCard from "@/components/TestimonialCard";
+import Image from "next/image";
+import { testimonials } from "../data/Data";
 const Testimonials = () => {
   return (
     <div className="py-16 px-4 w-[1400px] max-w-full m-auto">
@@ -9,12 +10,21 @@ const Testimonials = () => {
           <h3 className="">Testimonials</h3>
           <span
             className="block h-1 gradient-color absolute bottom-0 right-0 transform -translate-x-1 translate-y-1/2"
-            style={{ width: '50%' }}
+            style={{ width: "50%" }}
           ></span>
         </div>
-        <p className="text-lg text-center">
-        Don&apos;t just take my word for it - see what my satisfied clients have to say about my work.
-        </p>
+
+        <h4 className="text-center mt-4 text-xl">
+          Completed over 40 tasks on Fiverr with a stellar 5-star rating.
+        </h4>
+
+        <div className="flex justify-center items-center my-5 gap-2">
+          <Image src={"/star.svg"} alt="" width={30} height={30} />
+          <Image src={"/star.svg"} alt="" width={30} height={30} />
+          <Image src={"/star.svg"} alt="" width={30} height={30} />
+          <Image src={"/star.svg"} alt="" width={30} height={30} />
+          <Image src={"/star.svg"} alt="" width={30} height={30} />
+        </div>
       </div>
 
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
