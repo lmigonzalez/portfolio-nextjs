@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
-import Layout from '@/components/layout/Layout';
+import React from "react";
+import Head from "next/head";
+import Image from "next/image";
+import Layout from "@/components/layout/Layout";
 
-import { useStateContext } from '../context/StateContext';
+import { useStateContext } from "../context/StateContext";
 const About = () => {
   const { theme } = useStateContext();
 
@@ -45,16 +45,14 @@ const About = () => {
 
             <span
               className="block h-1 gradient-color absolute bottom-0 right-0 transform -translate-x-1 translate-y-1/2"
-              style={{ width: '50%' }}
+              style={{ width: "50%" }}
             ></span>
           </div>
           {/* &apos; */}
           <div className=" m-auto flex  gap-4 ">
             <div className="">
-             
-              <h4 className="text-xl font-bold mb-4">Welcome to my website!</h4>
               <Image
-                src={'/Luis G.png'}
+                src={"/Luis G.png"}
                 alt=""
                 width={250}
                 height={250}
@@ -62,42 +60,39 @@ const About = () => {
               />
               <div className="space-y-3">
                 <p>
-                  My name is Luis Gonzalez, and I&apos;m a skilled Full-Stack
-                  Web Developer based in sunny Miami, Florida.{' '}
+                  I&apos;m Luis Gonzalez, your go-to Full-Stack Web Developer and
+                  Shopify Expert in the sunny locale of Miami, Florida.
                 </p>
                 <p>
-                  I have a passion for coding and a keen eye for design, which
-                  allows me to specialize in creating beautiful and
-                  user-friendly web applications using the latest technologies.
-                </p>
-
-                <p>
-                  My expertise lies in HTML, CSS, and Javascript, and I have
-                  experience working with cutting-edge frameworks such as React,
-                  Next, Angular, Node, and Express. Additionally, I am
-                  proficient in databases such as MongoDB and MySQL, which
-                  enables me to create fast and efficient web applications that
-                  are responsive to user needs.
+                  My drive for coding, merged with a flair for design, has led
+                  me to specialize in developing accessible, visually appealing
+                  web applications using the latest tech.
                 </p>
 
                 <p>
-                  I am also a talented UX/UI designer who uses tools like Figma
-                  to create beautiful, intuitive designs that optimize the user
-                  experience and encourage visitors to return to your site.
-                </p>
-                <p>
-                  Moreover, I possess a solid foundation in SEO techniques, and
-                  I can optimize your website to improve its search engine
-                  ranking, driving more traffic to your site and increasing your
-                  online visibility.
+                  My skill set is rooted in HTML, CSS, and JavaScript, and I&apos;m
+                  well-versed in frameworks like React, Next.js, Angular,
+                  Node.js, and Express. I also have a firm handle on database
+                  systems, including MongoDB and MySQL, enabling me to build
+                  fast and user-responsive web apps.
                 </p>
 
                 <p>
-                  As a freelance web developer, I have honed my client
-                  management skills, and I am committed to providing you with
-                  the highest level of customer service throughout the entire
-                  development process, whether you&apos;re a small business
-                  owner or a large corporation.
+                  Besides coding, I&apos;m a skilled UX/UI designer who uses Figma to
+                  craft intuitive and attractive interfaces that enhance user
+                  experience and keep them coming back.
+                </p>
+                <p>
+                  I&apos;m also your Shopify guru—creating custom Shopify themes that
+                  stand out and setting up online stores that look great and
+                  convert. My knack for SEO means your site won&apos;t just sparkle;
+                  it&apos;ll be found.
+                </p>
+
+                <p>
+                  In my freelance journey, I&apos;ve fine-tuned my skills in client
+                  service, ensuring you get the best support from start to
+                  finish, no matter the size of your business.
                 </p>
               </div>
             </div>
@@ -107,48 +102,38 @@ const About = () => {
           </div>
           <div className="space-y-3">
             <p>
-              Some common problems that clients face are poor website
-              performance, inconsistent or outdated website design, difficulty
-              managing website content, poor search engine ranking, security
-              vulnerabilities, limited mobile responsiveness, and limited user
-              engagement.
-            </p>
-            <p>
-              However, I have a solution for each of these problems, such as
-              optimizing website speed and performance, creating a modern and
-              intuitive design, developing a custom content management system,
-              implementing security measures, developing a responsive design,
-              and utilizing UX/UI design principles.
+              I tackle standard client challenges head-on, from boosting your
+              site&apos;s speed, updating your design, simplifying content
+              management, and improving your search rank to upping your security
+              and ensuring your site looks good on any device.
             </p>
           </div>
           <div className="space-y-4 py-8  w-full">
             <h4 className="text-start text-xl font-bold mb-4 ">
-              My expertise includes:
+              Here&apos;s what I offer:
             </h4>
             <div>
               <ul>
                 <li>Custom web development</li>
-                <li>UX/UI design</li>
-                <li>Search engine optimization (SEO)</li>
-                <li>Content management systems (CMS)</li>
-                <li>E-commerce development</li>
-                <li>Web hosting and maintenance</li>
-                <li>Mobile App Development (IOS and Android)</li>
+                <li>Custom web and Shopify theme development</li>
+                <li>Expert UX/UI design</li>
+                <li>SEO to get your site noticed</li>
+                <li>Streamlined content management systems</li>
+                <li>E-commerce solutions that sell</li>
+                <li>Dependable web hosting and upkeep</li>
               </ul>
             </div>
             <div>
               <p>
-                I bring technical expertise, design skills, client management
-                skills, SEO skills, responsive design, and custom solutions to
-                the table. I also offer competitive pricing for my services,
-                ensuring you receive high-quality solutions within your budget.
+                I pride myself on combining technical know-how with design
+                creativity and customer care, all at a price that fits your
+                budget.
               </p>
             </div>
             <br />
             <p>
-              If you need a skilled and experienced web developer in Miami, feel
-              free to contact me, and let&apos;s discuss how I can help you
-              achieve your online goals.
+              Need a web and Shopify pro in Miami? Reach out, and let&apos;s boost
+              your online presence together.
             </p>
           </div>
 
@@ -156,17 +141,18 @@ const About = () => {
           <div className="w-full py-8 ">
             <h3
               className={`text-xl mb-4 ${
-                theme === 'light' ? 'text-black' : 'text-white'
+                theme === "light" ? "text-black" : "text-white"
               }`}
             >
-              But Luis, tell me more about you. Okay okay, if you really want to
-              know, here is some information about my personal life.
+              So, you&apos;re curious about the person behind the code? Well, if
+              you&apos;re keen to learn a bit more about me beyond the screen, here&apos;s
+              a glimpse into my personal world.
             </h3>
             <div className="flex gap-4">
-              {' '}
+              {" "}
               <div className="space-y-3">
                 <Image
-                  src={'/Luis-Gonzalez-family.png'}
+                  src={"/Luis-Gonzalez-family.png"}
                   alt=""
                   width={400}
                   height={400}
@@ -188,7 +174,7 @@ const About = () => {
                 <p>
                   In my free time, I enjoy playing Dota 2 with my friends. This
                   game provides a fun and challenging way to unwind and connect
-                  with others who share similar interests.{' '}
+                  with others who share similar interests.{" "}
                 </p>
                 <p>
                   I appreciate the strategic and team-oriented aspects of Dota 2
