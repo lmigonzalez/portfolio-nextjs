@@ -38,7 +38,7 @@ const Footer = () => {
 
       </div>
       <p>
-        ©2023 Luis Gonzalez - All rights reserved 
+        ©2022-2024 Luis Gonzalez - All rights reserved 
       </p>
     </footer>
   );
