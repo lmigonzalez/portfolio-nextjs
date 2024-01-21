@@ -1,5 +1,25 @@
 export const projects = [
   {
+    id: 0,
+    imageUrl: "/amazing-palettes.png",
+    projectName: "Amazing Palettes",
+    projectDescription:
+      "Discover, craft, save, and effortlessly share thousands of captivating color palettes and gradients. Designed with developers and designers in mind, our platform serves as a wellspring of inspiration. Additionally, it boasts an intuitive admin dashboard, empowering administrators to oversee various facets of the website.",
+    tech: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "SEO",
+    ],
+    code: "",
+    website: "https://www.amazingpalettes.com/",
+    underConstruction: false,
+  },
+  {
     id: 1,
     imageUrl: "/ultimate-screenshot.png",
     projectName: "Ultimate Finance Calculator",
