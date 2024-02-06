@@ -1,7 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useStateContext } from '../context/StateContext';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useStateContext } from "../context/StateContext";
 // interface BlogCardProps {
 //   imageUrl: string;
 //   blogTitle: string;
@@ -23,24 +23,15 @@ const BlogCard: React.FC<BlogCardProps> = ({
 }) => {
   const { theme } = useStateContext();
   return (
-    <Link href={'/articles/' + slug}>
+    <Link href={"/articles/" + slug}>
       <div
-        className={`shadow-xl hover:shadow-2xl cursor-pointer max-w-[400px] h-[400px] rounded-md   ${
-          theme === 'light' ? 'bg-white' : 'bg-black_color'
+        className={`shadow-xl hover:shadow-2xl cursor-pointer rounded-md   ${
+          theme === "light" ? "bg-white" : "bg-black_color"
         }`}
       >
-        <div className="w-full h-[250px]">
-          <Image
-            src={'https:' + imageUrl}
-            alt=""
-            width={400}
-            height={450}
-            className="rounded-t-md"
-          />
-        </div>
-        <div className="relative px-4 py-8 space-y-4 h-[150px]">
+        <div className="relative p-4 space-y-4">
           <h2 className="text-lg font-light">{blogTitle}</h2>
-          <div className="absolute bottom-2">
+          <div className="">
             <div className="flex space-x-2 text-xs text-black ">
               {tags?.map((item: any, index: number) => {
                 return (

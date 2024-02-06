@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Layout from '@/components/layout/Layout';
-import BlogCard from '@/components/BlogCard';
-import ReactPaginate from 'react-paginate';
-import { createClient } from 'contentful';
+import React, { useState } from "react";
+import Head from "next/head";
+import Layout from "@/components/layout/Layout";
+import BlogCard from "@/components/BlogCard";
+import ReactPaginate from "react-paginate";
+import { createClient } from "contentful";
 
 const Blog = ({ blogPost }) => {
   const [filterBlogs, setFilterBlogs] = useState([]);
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
 
   function handleFilterChange(e) {
     const value = e.target.value;
@@ -24,12 +24,12 @@ const Blog = ({ blogPost }) => {
 
   // pagination
   const [pageNumber, setPageNumber] = useState(0);
-  const blogsPerPage = 9;
+  const blogsPerPage = 15;
   const pagesVisited = pageNumber * blogsPerPage;
 
   function SelectedBlogs() {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {blogPost
           .slice(pagesVisited, pagesVisited + blogsPerPage)
           .map((item, index) => {
@@ -91,7 +91,7 @@ const Blog = ({ blogPost }) => {
               <h1 className="">Blog</h1>
               <span
                 className="block h-1 gradient-color absolute bottom-0 right-0 transform -translate-x-1 translate-y-1/2"
-                style={{ width: '50%' }}
+                style={{ width: "50%" }}
               ></span>
             </div>
             <p className="text-lg text-center">
@@ -110,7 +110,7 @@ const Blog = ({ blogPost }) => {
               />
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4 my-16 m-auto">
+            <div className="mt-16">
               {inputValue.length > 0 && filterBlogs.length === 0 ? (
                 <p className="text-xl">No blogs found</p>
               ) : inputValue.length > 0 ? (
@@ -165,12 +165,12 @@ const Blog = ({ blogPost }) => {
               pageCount={pageCount}
               onPageChange={changePage}
               containerClassName={
-                'flex items-center justify-center space-x-4 text-[20px]'
+                "flex items-center justify-center space-x-4 text-[20px]"
               }
-              previousLinkClassName={''}
-              nextLinkClassName={''}
-              disabledClassName={'text-[#D8D8D8]'}
-              activeClassName={'bg-orange_color text-white  px-2 py-1 rounded'}
+              previousLinkClassName={""}
+              nextLinkClassName={""}
+              disabledClassName={"text-[#D8D8D8]"}
+              activeClassName={"bg-orange_color text-white  px-2 py-1 rounded"}
             />
           </div>
         </div>
@@ -187,7 +187,7 @@ export async function getStaticProps() {
     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY,
   });
 
-  const res = await client.getEntries({ content_type: 'blogPost' });
+  const res = await client.getEntries({ content_type: "blogPost" });
 
   return {
     props: {
