@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import { useStateContext } from '@/context/StateContext';
+import React from "react";
+import Head from "next/head";
+import { useStateContext } from "@/context/StateContext";
 
-import Layout from '@/components/layout/Layout';
-import Hero from '@/sections/Hero';
-import Skills from '@/sections/Skills';
-import Projects from '@/sections/Projects';
-import Experience from '@/sections/Experience';
-import Testimonials from '@/sections/Testimonials';
+import Layout from "@/components/layout/Layout";
+import Hero from "@/sections/Hero";
+import Skills from "@/sections/Skills";
+import Projects from "@/sections/Projects";
+import Experience from "@/sections/Experience";
+import Testimonials from "@/sections/Testimonials";
 export default function Home() {
   const { theme } = useStateContext();
   return (
@@ -45,13 +45,13 @@ export default function Home() {
       <Layout>
         <div
           className={`relative transition-all ${
-            theme === 'light' ? 'bg-white' : 'bg-[#282A3A] text-white'
+            theme === "light" ? "bg-white" : "bg-[#282A3A] text-white"
           }`}
         >
           <Hero />
           <Skills />
           <Projects />
-          <Experience />
+          {/* <Experience /> */}
           <Testimonials />
         </div>
       </Layout>

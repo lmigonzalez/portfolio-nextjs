@@ -15,29 +15,26 @@ interface BlogCardProps {
   slug: any;
 }
 
-const BlogCard: React.FC<BlogCardProps> = ({
-  imageUrl,
-  blogTitle,
-  tags,
-  slug,
-}) => {
+const BlogCard: React.FC<BlogCardProps> = ({ blogTitle, tags, slug }) => {
   const { theme } = useStateContext();
   return (
     <Link href={"/articles/" + slug}>
       <div
-        className={`shadow-xl hover:shadow-2xl cursor-pointer rounded-md   ${
-          theme === "light" ? "bg-white" : "bg-black_color"
-        }`}
+        className={`shadow-xl hover:shadow-2xl cursor-pointer rounded-md min-h-[120px] flex border-2 ${
+          theme === "light" ? "bg-white border" : "bg-gray-600 border-black "
+        } relative`} // Added relative positioning to the parent container
       >
-        <div className="relative p-4 space-y-4">
+        <div className="p-4 flex flex-1 flex-col h-full absolute top-0 left-0 w-full">
+          {" "}
+          {/* Added absolute positioning */}
           <h2 className="text-lg font-light">{blogTitle}</h2>
-          <div className="">
-            <div className="flex space-x-2 text-xs text-black ">
+          <div className="mt-auto">
+            <div className="flex space-x-2 text-xs text-black">
               {tags?.map((item: any, index: number) => {
                 return (
                   <p
                     key={index}
-                    className="px-2 py-1 rounded-full bg-blue_color"
+                    className="px-2 py-1 rounded-full bg-slate-700 text-white"
                   >
                     {item}
                   </p>

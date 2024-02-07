@@ -8,7 +8,7 @@ import { createClient } from "contentful";
 const Blog = ({ blogPost }) => {
   const [filterBlogs, setFilterBlogs] = useState([]);
   const [inputValue, setInputValue] = useState("");
-
+  console.log(blogPost);
   function handleFilterChange(e) {
     const value = e.target.value;
     setInputValue(value);
@@ -24,12 +24,12 @@ const Blog = ({ blogPost }) => {
 
   // pagination
   const [pageNumber, setPageNumber] = useState(0);
-  const blogsPerPage = 15;
+  const blogsPerPage = 10;
   const pagesVisited = pageNumber * blogsPerPage;
 
   function SelectedBlogs() {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {blogPost
           .slice(pagesVisited, pagesVisited + blogsPerPage)
           .map((item, index) => {

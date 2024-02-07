@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { useStateContext } from '../context/StateContext';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useFormik } from 'formik';
-import Layout from '@/components/layout/Layout';
-import { contactSchema } from '@/validation/validation';
-import axios from 'axios';
-import Spinner from '@/components/Spinner';
+import React, { useState } from "react";
+import { useStateContext } from "../context/StateContext";
+import Head from "next/head";
+import Link from "next/link";
+import { useFormik } from "formik";
+import Layout from "@/components/layout/Layout";
+import { contactSchema } from "@/validation/validation";
+import axios from "axios";
+import Spinner from "@/components/Spinner";
 const Contact = () => {
   const { theme } = useStateContext();
   const [loading, setLoading] = useState(false);
@@ -21,9 +21,9 @@ const Contact = () => {
     handleSubmit,
   } = useFormik({
     initialValues: {
-      fullName: '',
-      email: '',
-      note: '',
+      fullName: "",
+      email: "",
+      note: "",
     },
     validationSchema: contactSchema,
     onSubmit,
@@ -32,7 +32,7 @@ const Contact = () => {
   function onSubmit(values: object, action: any) {
     setLoading(true);
     axios
-      .post('/api/mail', values)
+      .post("/api/mail", values)
       .then((res) => {
         setLoading(false);
       })
@@ -75,7 +75,7 @@ const Contact = () => {
       <Layout>
         <div
           className={`${
-            theme === 'light' ? 'bg-white' : 'bg-[#282A3A] text-white'
+            theme === "light" ? "bg-white" : "bg-[#282A3A] text-white"
           } flex flex-col justify-center space-y-3 py-16 w-[1400px] max-w-full px-4 m-auto`}
         >
           <div className="m-auto mb-12 ">
@@ -83,7 +83,7 @@ const Contact = () => {
               <h1 className="">Get in touch</h1>
               <span
                 className="block h-1 gradient-color absolute bottom-0 right-0 transform -translate-x-1 translate-y-1/2"
-                style={{ width: '50%' }}
+                style={{ width: "50%" }}
               ></span>
             </div>
             <p className="text-lg text-center">
@@ -92,17 +92,6 @@ const Contact = () => {
             </p>
           </div>
           <div className=" m-auto flex flex-col justify-center items-center w-full">
-            <div className="text-center space-y-2 m-auto mb-4">
-              <Link
-                className="font-medium text-lg text-blue_color"
-                href="mailto:luisdev@luisgonzalezdev.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                luisdev@luisgonzalezdev.org
-              </Link>
-              <p>-- OR --</p>
-            </div>
             <form
               onSubmit={handleSubmit}
               className="flex flex-col w-[700px] max-w-full border-2 border-orange_color px-4 py-6 rounded-xl"
@@ -139,7 +128,9 @@ const Contact = () => {
                   {errors.email}
                 </p>
               ) : null}
-              <label>Any Note?:</label>
+              <label className="after:content-['*'] after:text-[#EB4747]">
+                Message:
+              </label>
               <textarea
                 name="note"
                 value={values.note}
@@ -154,7 +145,7 @@ const Contact = () => {
               ) : null}
               <div className="w-full flex justify-end">
                 <button className="bg-orange_color w-full md:w-1/2 h-10 rounded text-white flex justify-center items-center">
-                  {loading ? <Spinner /> : 'Send'}
+                  {loading ? <Spinner /> : "Send"}
                 </button>
               </div>
             </form>
