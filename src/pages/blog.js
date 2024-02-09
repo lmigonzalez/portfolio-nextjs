@@ -8,7 +8,6 @@ import { createClient } from "contentful";
 const Blog = ({ blogPost }) => {
   const [filterBlogs, setFilterBlogs] = useState([]);
   const [inputValue, setInputValue] = useState("");
-  console.log(blogPost);
   function handleFilterChange(e) {
     const value = e.target.value;
     setInputValue(value);
