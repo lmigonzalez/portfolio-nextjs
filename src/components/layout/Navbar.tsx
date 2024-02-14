@@ -12,9 +12,15 @@ const Navbar: React.FC = () => {
   const currentRoute = router.pathname;
 
   return (
-    <header>
+    <header
+      className={`${
+        theme === "light"
+          ? "text-black bg-slate-100"
+          : "bg-black_color text-white"
+      }`}
+    >
       <nav
-        className={`w-full flex items-center justify-between px-4 py-2 relative${
+        className={`w-full flex items-center justify-between px-4 py-3 relative${
           theme === "light" ? "bg-white text-black" : "bg-[#282A3A] text-white"
         }`}
       >

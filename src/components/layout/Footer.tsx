@@ -1,16 +1,16 @@
-import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useStateContext } from '@/context/StateContext';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { useStateContext } from "@/context/StateContext";
 const Footer = () => {
   const { theme } = useStateContext();
-
-
 
   return (
     <footer
       className={`${
-        theme === 'light' ? 'text-black' : 'bg-black_color text-white'
+        theme === "light"
+          ? "text-black bg-slate-100"
+          : "bg-black_color text-white"
       } mt-auto  px-4 py-10 text-center`}
     >
       <div className="m-auto flex justify-center gap-4 mb-8">
@@ -35,11 +35,8 @@ const Footer = () => {
         >
           <Image src="/github.svg" alt="" width={40} height={30} />
         </Link>
-
       </div>
-      <p>
-        ©2022-2024 Luis Gonzalez - All rights reserved 
-      </p>
+      <p>©2022-2024 Luis Gonzalez - All rights reserved</p>
     </footer>
   );
 };

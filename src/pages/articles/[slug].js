@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { useStateContext } from '@/context/StateContext';
-import Layout from '../../components/layout/Layout';
-import { createClient } from 'contentful';
-import { BLOCKS, MARKS } from '@contentful/rich-text-types';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { agate } from 'react-syntax-highlighter/dist/cjs/styles/prism'; // Choose your preferred code highlighting style
+import React from "react";
+import Head from "next/head";
+import { useStateContext } from "@/context/StateContext";
+import Layout from "../../components/layout/Layout";
+import { createClient } from "contentful";
+import { BLOCKS, MARKS } from "@contentful/rich-text-types";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { agate } from "react-syntax-highlighter/dist/cjs/styles/prism"; // Choose your preferred code highlighting style
 
 const renderAsset = (node, children) => {
   const { file } = node.data.target.fields;
@@ -23,7 +23,7 @@ const renderEmbeddedEntry = (node) => {
       style={agate}
       wrapLongLines={true}
       wrapLines={false}
-      lineProps={{ style: { flexWrap: 'wrap' } }}
+      lineProps={{ style: { flexWrap: "wrap" } }}
     >
       {code}
     </SyntaxHighlighter>
@@ -37,8 +37,8 @@ const options = {
     [BLOCKS.PARAGRAPH]: (node, children) => {
       if (node.content && node.content[0] && node.content[0].value) {
         const isCodeSnippet =
-          node.content[0].nodeType === 'text' &&
-          node.content[0].marks.some((mark) => mark.type === 'code');
+          node.content[0].nodeType === "text" &&
+          node.content[0].marks.some((mark) => mark.type === "code");
         if (isCodeSnippet) {
           const code = node.content[0].value.trim();
           return (
@@ -47,7 +47,7 @@ const options = {
               style={agate}
               wrapLongLines={true}
               wrapLines={false}
-              lineProps={{ style: { flexWrap: 'wrap' } }}
+              lineProps={{ style: { flexWrap: "wrap" } }}
             >
               {code}
             </SyntaxHighlighter>
@@ -66,7 +66,7 @@ const client = createClient({
 
 export const getStaticPaths = async () => {
   const res = await client.getEntries({
-    content_type: 'blogPost',
+    content_type: "blogPost",
   });
 
   const paths = res.items.map((item) => ({
@@ -81,8 +81,8 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const { items } = await client.getEntries({
-    content_type: 'blogPost',
-    'fields.slug': params?.slug,
+    content_type: "blogPost",
+    "fields.slug": params?.slug,
   });
 
   return {
@@ -97,22 +97,16 @@ const Article = ({ article }) => {
     <>
       <Head>
         <title>{article.title} | Luis Gonzalez</title>
-        <meta name="description" content={article.description} />
-        {/* <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={image} />
-        <meta property="og:url" content={url} />
-        <meta property="og:type" content="article" /> */}
       </Head>
       <Layout>
         <article
           className={`${
-            theme === 'light' ? 'text-black' : 'text-white'
+            theme === "light" ? "text-black" : "text-white"
           } w-[700px] max-w-full m-auto px-4`}
         >
           <div>
             <h1
-              className={`${theme === 'light' ? 'text-black' : 'text-white'}`}
+              className={`${theme === "light" ? "text-black" : "text-white"}`}
             >
               {article.title}
             </h1>
