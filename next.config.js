@@ -7,8 +7,8 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '*',
-        destination: 'https://www.luisgonzalezdev.com',
+        source: '/:path*',
+        destination: 'https://www.luisgonzalezdev.com/:path*',
         permanent: true,
       },
     ]
